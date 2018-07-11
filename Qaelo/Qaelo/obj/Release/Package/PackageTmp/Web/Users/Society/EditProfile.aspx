@@ -1,0 +1,630 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditProfile.aspx.cs" Inherits="Qaelo.Web.Users.Society.EditProfile" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Profile</title>
+    <!-- Css for Profile page-->
+    <link href="../../../Content/CustomCss/Profile/assets/css/bootstrap.min.css" rel="stylesheet" />
+
+            <link href="../../../Content/Qaelo%20template/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../../Content/Qaelo%20template/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../../Content/Qaelo%20template/css/animate.min.css" rel="stylesheet" />
+    <link href="../../../Content/Qaelo%20template/css/lightbox.css" rel="stylesheet" />
+    <link href="../../../Content/Qaelo%20template/css/main.css" rel="stylesheet" />
+    <link href="../../../Content/Qaelo%20template/css/responsive.css" rel="stylesheet" />
+
+    
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet"/>
+
+    <link href="../../../Content/CustomCss/Profile/assets/css/gsdk-base.css" rel="stylesheet" />
+        <!--Notify -->
+    <link href="../../../Content/CustomCss/notify/animate.css" rel="stylesheet" />
+    <script src="../../../Content/Qaelo%20template/js/jquery.js"></script>
+    <script src="../../../Content/Qaelo%20template/js/bootstrap.min.js"></script>
+    <script src="../../../Content/CustomCss/notify/dist/bootstrap-notify.js"></script>
+    <!--/Notify -->
+</head>
+<body>
+            <!--Nav bar-->
+    <header id="header">      
+        <div class="navbar navbar-inverse" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand" href="../../../index.html">
+                    	<h3 style="color:#d89b4e"><strong> Qaelo</strong></h3>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right" style="margin-top:10px">
+                        <li ><a href="Home.aspx">Home</a></li>
+                             <li ><a href="PostProfile.aspx">Manage Your Profile</a></li>
+                             <li ><a href="ListEvent.aspx">Post Event</a></li>
+                             <li ><a href="ManageEvents.aspx">Manage Events</a></li>
+                             <li ><a href="EditProfile.aspx">Edit Profile</a></li>
+                        <li><a href="../../Account/Login.aspx?logout=true">Logout</a></li>    			
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+        <!--Notifier-->
+     <asp:Label ID="lblSuccess" style="opacity:-20" runat="server" Text=""></asp:Label>
+             <script type="text/javascript">
+            (function ($)
+            {
+                var success = $('#<%=lblSuccess.ClientID%>').text();
+
+                if (success.length) {
+                    $.notify(success, { type: "success" });
+            }
+            })(jQuery);
+             </script>
+    
+     <asp:Label ID="lblErrorMessage" style="opacity:-20" runat="server" Text=""></asp:Label>
+         <script type="text/javascript">
+            (function ($)
+            {
+                var error = $('#<%=lblErrorMessage.ClientID%>').text();
+
+                if (error.length > 5) {
+                    $.notify(error, {
+                        type: "danger", animate: {
+                            enter: 'animated bounceIn',
+                            exit: 'animated bounceOut'
+                        }
+                    });
+            }
+            })(jQuery);
+             </script>
+    <!--/Notifier-->
+        <!--   Big container   -->
+    <div class="container">
+        <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <!--      Wizard container        -->   
+                <div class="card wizard-card ct-wizard-orange" id="wizardProfile">
+                    <form runat="server" action="" method="">
+                <!--        You can switch "ct-wizard-orange"  with one of the next bright colors: "ct-wizard-blue", "ct-wizard-green", "ct-wizard-orange", "ct-wizard-red"             -->
+                
+                    	<div class="wizard-header">
+                        	<h3>
+                        	   <b>Edit</b>YOUR PROFILE <br/>
+                        	</h3>
+                    	</div>
+                    	<ul>
+                            <li><a href="#about" data-toggle="tab">About</a></li>
+                            <li><a href="#account" data-toggle="tab">Account</a></li>
+                            <li><a href="#address" data-toggle="tab">Business</a></li>
+                        </ul>
+                        
+                        <div class="tab-content">
+                            <div class="tab-pane" id="about">
+                              <div class="row">
+                                  <h4 class="info-text"> Basic information</h4>
+                                  <div class="col-sm-4 col-sm-offset-1">
+                                     <div class="picture-container">
+                                          <div class="picture">
+                                              <img  src="" class="picture-src" runat="server" id="wizardPicturePreview" title=""/>
+                                              <asp:FileUpload ID="wizardPicture" runat="server" />
+                                          </div>
+                                          <h6>Choose Picture</h6>
+                                      </div>
+                                  </div>
+                                  <div class="col-sm-6">
+                                      <div class="form-group">
+                                          <div class="col-sm-12">
+                                        <label>Society Name <small>(required)</small></label>
+                                          <asp:TextBox ID="txtName" name="firstname" type="text" class="form-control" placeholder="My Society name is..." runat="server"></asp:TextBox>
+
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <div class="col-sm-6">
+                                          <label>Email <small>(required)</small></label>
+                                              <asp:TextBox ID="txtEmail" name="email" type="email" class="form-control" placeholder="me@gmail.com" runat="server"></asp:TextBox>
+                                          </div>
+                                          <div class="col-sm-6">
+                                               <label>Number<small>(required)</small></label>
+                                              <asp:TextBox ID="txtNumber" name="number" type="number" class="form-control" placeholder="0712345678" runat="server"></asp:TextBox>
+                                          </div>
+                                         </div>
+                                  </div>
+
+                                  <div class="col-sm-12">
+                                      <div class="col-sm-5">
+                                          <div class="form-group">
+                                        <label>Nearest University</label>
+                                          <asp:DropDownList ID="ddlUniversity" Width="100%" CssClass="form-control" AutoPostBack="true" runat="server" >
+                                              <asp:ListItem disabled="" selected="" Value="NONE">- University -</asp:ListItem>
+                                              <asp:ListItem Value="University of Pretoria">University of Pretoria</asp:ListItem>
+                                              <asp:ListItem Value="University of the Witwatersrand">University of the Witwatersrand</asp:ListItem>
+                                              <asp:ListItem Value="Monash University">Monash University</asp:ListItem>
+                                              <asp:ListItem Value="Walter Sisulu University">Walter Sisulu University</asp:ListItem>
+                                              <asp:ListItem Value="Vaal University of Technology">Vaal University of Technology</asp:ListItem>
+                                              <asp:ListItem Value="University of Zululand">University of Zululand</asp:ListItem>
+                                              <asp:ListItem Value="University of Venda">University of Venda</asp:ListItem>
+                                              <asp:ListItem Value="University of the Western Cape">University of the Western Cape</asp:ListItem>
+                                              <asp:ListItem Value="University of South Africa (UNISA)">University of South Africa(UNISA)</asp:ListItem>
+                                              <asp:ListItem Value="University of Limpopo">University of Limpopo</asp:ListItem>
+                                              <asp:ListItem Value="University of Kwazulu-Natal">University of Kwazulu-Natal</asp:ListItem>
+                                              <asp:ListItem Value="University of Cape Town">University of Cape Town</asp:ListItem>
+                                              <asp:ListItem Value="University of Fort Hare">University of Fort Hare</asp:ListItem>
+                                              <asp:ListItem Value="Cape Peninsula University of Technology">CPUT</asp:ListItem>
+                                              <asp:ListItem Value="Central University of Technology">Central University of Technology</asp:ListItem>
+                                              <asp:ListItem Value="University of Johannesburg">University of Johannesburg</asp:ListItem>
+                                              <asp:ListItem Value="Durban University of Technology">DUT</asp:ListItem>
+                                              <asp:ListItem Value="Mangosuthu University of Technology">MUT</asp:ListItem>
+                                              <asp:ListItem Value="Nelson Mandela Metropolitan University">NMMU</asp:ListItem>
+                                              <asp:ListItem Value="North West University">North West University</asp:ListItem>
+                                              <asp:ListItem Value="Rhodes University">Rhodes University</asp:ListItem>
+                                              <asp:ListItem Value="Tshwane University of Technology">TUT</asp:ListItem>
+                                              <asp:ListItem Value="University of the Free State">University of the Free State</asp:ListItem>
+                                              <asp:ListItem Value="Stellenbosch University">Stellenbosch University</asp:ListItem>
+                                              <asp:ListItem Value="University of Mpumalanga">University of Mpumalanga</asp:ListItem>
+                                          </asp:DropDownList>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-6">
+                                      <div class="form-group">
+                                                                             
+                                      <div class="form-group"  id="DivDefault" visible="true" runat="server">
+                                            <label>Campus</label><br/>
+                                              <asp:DropDownList ID="DropDownList1" AutoPostBack="true" runat="server" Width="100%"  CssClass="form-control">
+                                              <asp:ListItem Value=" "  disabled=""  Selected="True" >  Please Select a campus</asp:ListItem>
+                                              </asp:DropDownList>
+                                          </div>
+
+                                       <div class="form-group"  id="DivWitsCampuses" visible="false" runat="server">
+                                            <label> Wits Campuses</label><br/>
+                                              <asp:DropDownList ID="ddlWitsCampus" AutoPostBack="true" runat="server" Width="100%"  CssClass="form-control">
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                              <asp:ListItem Value="Braamfontein Campus">Braamfontein Campus</asp:ListItem>
+                                              <asp:ListItem Value="Education Campus">Education Campus</asp:ListItem>
+                                              <asp:ListItem Value="Medical School">Medical School</asp:ListItem>
+                                                                                  
+                                              </asp:DropDownList>
+                                          </div>
+
+
+                                       <div class="form-group"  id="DivNWUCampus" visible="false" runat="server">
+                                            <label>NWU Campuses</label><br/>
+                                              <asp:DropDownList ID="ddlNWUCampus" AutoPostBack="true" runat="server" Width="100%"  CssClass="form-control">
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                              <asp:ListItem Value="Vaal Triangle Campus">Vaal Triangle Campus</asp:ListItem>
+                                              <asp:ListItem Value="Potchefstroom Campus">Potchefstroom Campus</asp:ListItem>
+                                              <asp:ListItem Value="Mafikeng Campus">Mafikeng Campus</asp:ListItem>
+                                                                                  </asp:DropDownList>
+                                          </div>
+
+                                       <div class="form-group"  id="DivUPCampuses" visible="false" runat="server">
+                                            <label> UP Campuses</label><br/>
+                                              <asp:DropDownList ID="ddlUPCampus" AutoPostBack="true" runat="server" Width="100%"  CssClass="form-control" >
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                              <asp:ListItem Value="Hatfield (Main) Campus">Hatfield (Main) Campus</asp:ListItem>
+                                              <asp:ListItem Value="Groenkloof Campus">Groenkloof Campus</asp:ListItem>
+                                              <asp:ListItem Value="Prinshof Campus">Prinshof Campus</asp:ListItem>
+                                              <asp:ListItem Value="Onderstepoort Campus">Onderstepoort Campus</asp:ListItem> 
+                                                  <asp:ListItem Value="Mamelodi Campus">Mamelodi Campus</asp:ListItem> 
+                                              </asp:DropDownList>
+                                          </div>
+
+                                       <div class="form-group" id="DivujCampuses" visible="false" runat="server">
+                                            <label> UJ Campuses</label><br/>
+                                              <asp:DropDownList ID="ddlUjcampus" AutoPostBack="true" runat="server" Width="100%"  CssClass="form-control">
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                              <asp:ListItem Value="Auckland Park (Main) Campus">Auckland Park (Main) Campus</asp:ListItem>
+                                              <asp:ListItem Value="Bunting Road Campus">Bunting Road Campuss</asp:ListItem>
+                                              <asp:ListItem Value="Doornfontein Campus">Doornfontein Campus</asp:ListItem>
+                                              <asp:ListItem Value="Soweto Campus">Soweto Campus</asp:ListItem>                                          </asp:DropDownList>
+                                          </div>
+
+                                       <div class="form-group" id="DivMonashCampuses" visible="false" runat="server">
+                                            <label> Monash Campuses</label><br/>
+                                              <asp:DropDownList ID="ddlMonashCampuses" AutoPostBack="true" runat="server" Width="100%" CssClass="form-control">
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                              <asp:ListItem Value="Monash University">Monash University</asp:ListItem>
+                                                                                    </asp:DropDownList>
+                                          </div>
+
+                                       <div class="form-group" id="DivwsuCampuses" visible="false" runat="server">
+                                            <label> WSU Campuses</label><br/>
+                                              <asp:DropDownList ID="ddlwsucampuses" AutoPostBack="true" runat="server" Width="100%"  CssClass="form-control">
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                              <asp:ListItem Value="East London Campus">East London Campus</asp:ListItem>
+                                              <asp:ListItem Value="Queenstown Campus">Queenstown Campus</asp:ListItem>
+                                              <asp:ListItem Value="Mthatha Campus">Mthatha Campus</asp:ListItem>
+                                              <asp:ListItem Value="Butterworth Campus">Butterworth Campus</asp:ListItem>                                          </asp:DropDownList>
+                                          </div>
+
+                                       <div class="form-group" id="DivuzCampuses" visible="false" runat="server">
+                                            <label> UZ Campuses</label><br/>
+                                              <asp:DropDownList ID="ddlUZCampuses" AutoPostBack="true" runat="server" Width="100%"  CssClass="form-control">
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                        
+                                              <asp:ListItem Value="Queenstown Campus">Queenstown Campus</asp:ListItem>
+                                              <asp:ListItem Value="Richards Bay Campus">Richards Bay Campus</asp:ListItem>
+                                              <asp:ListItem Value="Science Centre">Science Centre</asp:ListItem>                                          </asp:DropDownList>
+                                          </div>
+
+                                       <div class="form-group" id="DivUnivenCampuses" visible="false" runat="server">
+                                            <label> Univen Campuses</label><br/>
+                                              <asp:DropDownList ID="ddlUnivenCampuses" AutoPostBack="true" runat="server" Width="100%" CssClass="form-control">
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                        
+                                              <asp:ListItem Value="University of Venda">University of Venda</asp:ListItem>
+                                                                                  </asp:DropDownList>
+                                          </div>
+
+                                       <div class="form-group" id="DivulCampuses" visible="false" runat="server">
+                                            <label> UL</label><br/>
+                                              <asp:DropDownList ID="DdlUl" runat="server" AutoPostBack="true" Width="100%"  CssClass="form-control">
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                        
+                                              <asp:ListItem Value="University of Limpopo">University of Limpopo</asp:ListItem>
+                                                                                  </asp:DropDownList>
+                                          </div>
+
+                                       <div class="form-group" id="DivUKZNCampuses" visible="false" runat="server">
+                                            <label> UKZN Campuses</label><br/>
+                                              <asp:DropDownList ID="ddlUKZN" runat="server" AutoPostBack="true" Width="100%"  CssClass="form-control">
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                              <asp:ListItem Value="Edgewood Campus">Edgewood Campus</asp:ListItem>
+                                              <asp:ListItem Value="Howard Colledge">Howard Colledge</asp:ListItem>
+                                              <asp:ListItem Value="Medical School">Medical School</asp:ListItem>
+                                              <asp:ListItem Value="Pietermaritzburg Campus">Pietermaritzburg Campus</asp:ListItem> 
+                                                  <asp:ListItem Value="WestVille Campus">WestVille Campus</asp:ListItem> 
+                                              </asp:DropDownList>
+                                          </div>
+
+                                       <div class="form-group" id="DivUCTCampuses" visible="false" runat="server">
+                                            <label> UCT Campuses</label><br/>
+                                              <asp:DropDownList ID="DDLUCTCampuses" runat="server" AutoPostBack="true" Width="100%" CssClass="form-control">
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                              <asp:ListItem Value="Groote Schuur Campus">Groote Schuur Campus</asp:ListItem>
+                                              <asp:ListItem Value="Health Sciences Campus">Health Sciences Campus</asp:ListItem>
+                                              <asp:ListItem Value="Hiddingh Campus">Hiddingh Campus</asp:ListItem>
+                                              <asp:ListItem Value="Breakwater Campus">Breakwater Campus</asp:ListItem> 
+                                                  <asp:ListItem Value="Upper, middle and lower Campuses">Upper, middle and lower Campuses</asp:ListItem> 
+                                              </asp:DropDownList>
+                                          </div>
+           
+                                       <div class="form-group"  id="DivUFHCampuses"  visible="false" runat="server">
+                                            <label> UFH Campuses</label><br/>
+                                              <asp:DropDownList ID="DdlUFHCampuses" runat="server" AutoPostBack="true" Width="100%" CssClass="form-control">
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                              <asp:ListItem Value="East London Campus">East London Campus</asp:ListItem>
+                                              <asp:ListItem Value="Bhisho Campus">Bhisho Campus</asp:ListItem>
+                                              <asp:ListItem Value="Alice (Main) Campus">Alice (Main) Campus</asp:ListItem>
+                                              <asp:ListItem Value="Breakwater Campus">Breakwater Campus</asp:ListItem> 
+                                              </asp:DropDownList>
+                                          </div>
+
+                                       <div class="form-group"  id="DivCPUTCampuses" visible="false" runat="server">
+                                            <label> CPUT Campuses</label><br/>
+                                              <asp:DropDownList ID="DdlCPUTCampuses" runat="server" AutoPostBack="true" Width="100%"  CssClass="form-control">
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                              <asp:ListItem Value="Tygerberg Hospital">Tygerberg Hospital</asp:ListItem>
+                                              <asp:ListItem Value="Roeland Street Building">Roeland Street Building</asp:ListItem>
+                                              <asp:ListItem Value="Groot Schuur Hospital">Groot Schuur Hospital</asp:ListItem>
+                                              <asp:ListItem Value="Wellington Campus">Wellington Campus</asp:ListItem> 
+                                                  <asp:ListItem Value="Mowbray Campus">Mowbray Campus</asp:ListItem>
+                                                  <asp:ListItem Value="Granger Bay Campus">Granger Bay Campus</asp:ListItem>
+                                              <asp:ListItem Value="Granger Bay Campus">Granger Bay Campus</asp:ListItem>
+                                              <asp:ListItem Value="Cape Town Campus">Cape Town Campus</asp:ListItem>
+                                              <asp:ListItem Value="Bellville Campus">Bellville Campus</asp:ListItem> 
+                        
+                                              </asp:DropDownList>
+                                          </div>
+
+                                       <div class="form-group"  id="DivDUTCampuses" visible="false" runat="server">
+                                            <label> DUT Campuses</label><br/>
+                                              <asp:DropDownList ID="DdlDUTCampuses" runat="server" AutoPostBack="true" Width="100%"  CssClass="form-control">
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                              <asp:ListItem Value="Riverside Campus">Riverside Campus</asp:ListItem>
+                                              <asp:ListItem Value="City Campus">City Campus</asp:ListItem>
+                                              <asp:ListItem Value="Ritson Campus">Ritson Campus</asp:ListItem>
+                                              <asp:ListItem Value="Brickfield Campus">Brickfield Campus</asp:ListItem> 
+                                                  <asp:ListItem Value="Steve Biko Campus">Steve Biko Campus</asp:ListItem>
+                                                  <asp:ListItem Value="ML Sultan Campus">ML Sultan Campus</asp:ListItem>
+                                             
+                        
+                                              </asp:DropDownList>
+                                          </div>
+
+                                       <div class="form-group" id="DivCUTCampuses" visible="false" runat="server">
+                                            <label> CUT Campuses</label><br/>
+                                              <asp:DropDownList ID="DdlCUTCampuses" runat="server" AutoPostBack="true" Width="100%"  CssClass="form-control">
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                              <asp:ListItem Value="Bloemfontein Campus">Bloemfontein Campus</asp:ListItem>
+                                              <asp:ListItem Value="Kimberley Campus">Kimberley Campus</asp:ListItem>
+                                              <asp:ListItem Value="Welkom Campus">Welkom Campus</asp:ListItem>
+                                            
+                        
+                                              </asp:DropDownList>
+                                          </div>
+
+                                       <div class="form-group" id="DivMUTCampuses" visible="false" runat="server">
+                                            <label> MUT Campuses</label><br/>
+                                              <asp:DropDownList ID="DdlMUTCampuses" runat="server" AutoPostBack="true" Width="100%"  CssClass="form-control">
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                              <asp:ListItem Value="Mangosuthu University of Technology">Mangosuthu University of Technology</asp:ListItem>
+                                        
+                                              </asp:DropDownList>
+                                          </div>
+
+                                       <div class="form-group" id="DivNMMUCampuses" visible="false" runat="server">
+                                            <label> NMMU Campuses</label><br/>
+                                              <asp:DropDownList ID="DdlNMMUCampuses" runat="server" AutoPostBack="true" Width="100%"  CssClass="form-control">
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                              <asp:ListItem Value="Missionvale Campus">Missionvale Campus</asp:ListItem>
+                                              <asp:ListItem Value="George Campus">George Campus</asp:ListItem>
+                                              <asp:ListItem Value="Bird Street Campus">Bird Street Campus</asp:ListItem>
+                                              <asp:ListItem Value="Second Avenue Campus">Second Avenue Campus</asp:ListItem> 
+                                                  <asp:ListItem Value="South Campus">South Campus</asp:ListItem>
+                                                  <asp:ListItem Value="North Campus">North Campus</asp:ListItem>
+                                             
+                        
+                                              </asp:DropDownList>
+                                          </div>
+                        
+                                       <div class="form-group" id="DivMUCampuses" visible="false" runat="server">
+                                            <label> Mafikeng University Campuses</label><br/>
+                                              <asp:DropDownList ID="DdlMUCampuses" runat="server" AutoPostBack="true" Width="100%"  CssClass="form-control">
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                              <asp:ListItem Value="Vaal Triangle Campus">Vaal Triangle Campus</asp:ListItem>
+                                              <asp:ListItem Value="Potchefstroom Campus">Potchefstroom Campus</asp:ListItem>
+                                              <asp:ListItem Value="Mafikeng Campus">Mafikeng Campus</asp:ListItem>
+                                         
+                                             
+                        
+                                              </asp:DropDownList>
+                                          </div>
+
+                                       <div class="form-group" id="DivRhodesCampuses" visible="false" runat="server">
+                                            <label> Rodes University Campuses</label><br/>
+                                              <asp:DropDownList ID="DdlRodesCampuses" runat="server" AutoPostBack="true" Width="100%"  CssClass="form-control">
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                              <asp:ListItem Value="Rhodes University">Rhodes University</asp:ListItem>
+                                    
+                                             
+                                              </asp:DropDownList>
+                                          </div>
+
+                                       <div class="form-group" id="DivTUTCampuses" visible="false" runat="server">
+                                            <label> TUT Campuses</label><br/>
+                                              <asp:DropDownList ID="DdlTUTCampuses" runat="server" AutoPostBack="true" Width="100%"  CssClass="form-control">
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                              <asp:ListItem Value="Mbombela Campus">Mbombela Campus</asp:ListItem>
+                                              <asp:ListItem Value="eMalahleni Campus">eMalahleni Campus</asp:ListItem>
+                                              <asp:ListItem Value="Soshanguve North 1">Soshanguve North 1</asp:ListItem>
+                                           <asp:ListItem Value="Soshanguve North 2">Soshanguve North 2</asp:ListItem>
+                                              <asp:ListItem Value="Soshanguve South 2">Soshanguve South 2</asp:ListItem>
+                                              <asp:ListItem Value="Soshanguve South 1">Soshanguve South 1</asp:ListItem>
+                                                    <asp:ListItem Value="Pretoria Campus">Pretoria Campus</asp:ListItem>
+                                              <asp:ListItem Value="Ga-Rankuwa Campus">Ga-Rankuwa Campus</asp:ListItem>
+                                              <asp:ListItem Value="Arcadia Campus">Arcadia Campus</asp:ListItem>
+                                             
+                                                <asp:ListItem Value="Arts Campus">Arts Campus</asp:ListItem>
+                                              <asp:ListItem Value="Polokwane Campus">Polokwane Campus</asp:ListItem>
+                                              </asp:DropDownList>
+                                          </div>
+
+                                       <div class="form-group" id="DivVUTCampuses" visible="false"  runat="server">
+                                            <label> VUT Campuses</label><br/>
+                                              <asp:DropDownList ID="DdlVUTCampuses" runat="server" AutoPostBack="true" Width="100%"  CssClass="form-control">
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                              <asp:ListItem Value="Vanderbijlpark Campus">Vanderbijlpark Campus</asp:ListItem>
+                                              <asp:ListItem Value="Secunda Campus">Secunda Campus</asp:ListItem>
+                                              <asp:ListItem Value="Upington Campus">Upington Campus</asp:ListItem>
+                                         
+                                             
+                        
+                                              </asp:DropDownList>
+                                          </div>
+
+                                       <div class="form-group" id="DivUFSCampuses" visible="false" runat="server">
+                                            <label> UFS Campuses</label><br/>
+                                              <asp:DropDownList ID="ddlUFSCampus" runat="server" AutoPostBack="true" Width="100%" CssClass="form-control">
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                              <asp:ListItem Value="Bloemfontein Campus">Bloemfontein Campus</asp:ListItem>
+                                              <asp:ListItem Value="Qwaqwa Campus">Qwaqwa Campus</asp:ListItem>
+                                              <asp:ListItem Value="South Campus">South Campus</asp:ListItem>
+                                             
+                                             
+                        
+                                              </asp:DropDownList>
+                                          </div>
+    
+                                       <div class="form-group"  id="DivSTUCampuses" visible="false" runat="server">
+                                            <label> STU Campuses</label><br/>
+                                              <asp:DropDownList ID="DdlSTUCampuses" runat="server" AutoPostBack="true" Width="100%" CssClass="form-control">
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                              <asp:ListItem Value="Stellebosh Campus">Stellebosh Campus</asp:ListItem>
+                                              <asp:ListItem Value="Tygerburg Campus">Tygerburg Campus</asp:ListItem>
+                                              <asp:ListItem Value="US Business School">US Business School</asp:ListItem>
+                                              <asp:ListItem Value="Worcester Campus">Worcester Campus</asp:ListItem> 
+                                               
+                                                  
+                        
+                                              </asp:DropDownList>
+                                          </div>
+                     
+                                       <div class="form-group" id="DivUMCampuses"  visible="false" runat="server">
+                                            <label> UM Campuses</label><br/>
+                                              <asp:DropDownList ID="DdlUMCampuses" runat="server" AutoPostBack="true" Width="100%" CssClass="form-control">
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                              <asp:ListItem Value="Mbombela Campus">Mbombela Campus</asp:ListItem>
+                                              <asp:ListItem Value="Siyabuswa Campus">Siyabuswa Campus</asp:ListItem>
+                                           
+                                             
+                        
+                                              </asp:DropDownList>
+                                          </div>
+                         
+
+                                  
+                                       <div class="form-group"  id="DivUNISACampuses" visible="false" runat="server">
+                                            <label> UNISA Campuses</label><br/>
+                                              <asp:DropDownList ID="DdlUNISACampuses" runat="server" AutoPostBack="true" Width="100%"  CssClass="form-control" >
+                                              <asp:ListItem Value=" ">Please Select a campus</asp:ListItem>
+                                              <asp:ListItem Value="East London">East London</asp:ListItem>
+                                              <asp:ListItem Value="Mthatha">Mthatha</asp:ListItem>
+                                                      <asp:ListItem Value="Port Elizabeth">Port Elizabeth</asp:ListItem>
+                                              <asp:ListItem Value="Muckleneuk Campus">Muckleneuk Campus</asp:ListItem>
+                                                             <asp:ListItem Value="Sunnyside Campus">Sunnyside Campus</asp:ListItem>
+                                              <asp:ListItem Value="Johannesburg">Johannesburg</asp:ListItem>
+                                                             <asp:ListItem Value="Florida Science Campus">Florida Science Campus</asp:ListItem>
+                                              <asp:ListItem Value="Ekurhuleni Campus">Ekurhuleni Campus</asp:ListItem>
+                                                             <asp:ListItem Value="Vaal Triangle">Vaal Triangle</asp:ListItem>
+                                              <asp:ListItem Value="Durban">Durban</asp:ListItem>
+                                                             <asp:ListItem Value="Pietermaritzburg">Pietermaritzburg</asp:ListItem>
+                                              <asp:ListItem Value="Newcastle">Newcastle</asp:ListItem>
+                                                             <asp:ListItem Value="Richards Bay">Richards Bay</asp:ListItem>
+                                              <asp:ListItem Value="Wild Coast">Wild Coast</asp:ListItem>
+                                                             <asp:ListItem Value="Polokwane">Polokwane</asp:ListItem>
+                                              <asp:ListItem Value="Makhado">Makhado</asp:ListItem>
+                                                             <asp:ListItem Value="Rustenburg">Rustenburg</asp:ListItem>
+                                              <asp:ListItem Value="Bloemfontein">Bloemfontein</asp:ListItem>
+                                                             <asp:ListItem Value="Mahikeng">Mahikeng</asp:ListItem>
+                                              <asp:ListItem Value="Potchefstroom">Potchefstroom</asp:ListItem>
+                                                             <asp:ListItem Value="Kimberley">Kimberley</asp:ListItem>
+                                              <asp:ListItem Value="Kroonstad">Kroonstad</asp:ListItem>
+                                                     <asp:ListItem Value="Nelspruit">Nelspruit</asp:ListItem>
+                                              <asp:ListItem Value="Middelburg">Middelburg</asp:ListItem>
+                                                             <asp:ListItem Value="Cape Town">Cape Town</asp:ListItem>
+                                              <asp:ListItem Value="George">George</asp:ListItem>
+                                             
+                        
+                                              </asp:DropDownList>
+                                          </div>
+                                      </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+
+                            <div class="tab-pane" id="account">
+                                <h4 class="info-text"> Update your Password</h4>
+                                <div class="row">
+                                    <div class="col-sm-7 col-sm-offset-2">
+                                         <div class="form-group">
+                                             <asp:TextBox ID="txtCurrentPassword" type="password" class="form-control" placeholder="Cuurent password" runat="server"></asp:TextBox>
+                                          </div>
+                                    </div>
+                                    <div class="col-sm-7 col-sm-offset-2">
+                                         <div class="form-group">
+                                            
+                                             <asp:TextBox ID="txtNewPassword" type="password" class="form-control" placeholder="New password" runat="server"></asp:TextBox>
+                                          </div>
+                                    </div>
+                                     <div class="col-sm-7 col-sm-offset-2">
+                                         <div class="form-group">
+                                            
+                                             <asp:TextBox ID="txtConfirmPassword" type="password" class="form-control" placeholder="Confirm Password" runat="server"></asp:TextBox>
+                                          </div>
+                                    </div>
+                                    
+                                                                         
+                                    <div class="col-sm-7 col-sm-offset-2">
+                                         <div class="form-group">
+                                             <asp:Button ID="btnUpdate" class="btn btn-info pull-right" runat="server" Text="update" OnClick="btnUpdate_Click" />
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="address">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h4 class="info-text"> More About your Society</h4>
+                                    </div>
+                                    <div class="col-sm-6 col-sm-offset-1">
+                                         <div class="form-group">
+                                             <div class="col-sm-6">
+                                            <label>Meeting Time</label>
+                                             <asp:TextBox ID="txtMeetingTime" MaxLength="13" type="text" class="form-control" placeholder="16:00-19:00" runat="server"></asp:TextBox>
+
+                                             </div>
+                                             <div class="col-sm-6">
+                                             <label>Meetings Day(s)</label>
+                                             <asp:TextBox ID="txtMeetingDays" type="text" class="form-control" placeholder="Mondays..." runat="server"></asp:TextBox>
+
+                                             </div>
+                                          </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                      <div class="form-group">
+                                          <label>Enter Society Type</label>
+                                             <asp:TextBox ID="txtSocityType" type="text" class="form-control" placeholder="Society Type" runat="server"></asp:TextBox>
+                                      </div>
+                                    </div>
+                                    <div class="col-sm-6 col-sm-offset-1">
+                                         <div class="form-group">
+                                         <label>Small description about the Society. </label>
+                                             <asp:TextBox ID="txtDescription" class="form-control" placeholder="" TextMode="multiline"  Rows="6"  runat="server">
+
+                                             </asp:TextBox>
+                                          </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                         <div class="form-group">
+                                            <label>Facebook Link</label>
+                                            <asp:TextBox ID="txtFacebookLink" CssClass="form-control" placeholder="paste facebook link here" runat="server"></asp:TextBox>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wizard-footer">
+                            <div class="pull-right">
+                                <input type='button' class='btn btn-next btn-fill btn-warning btn-wd btn-sm' name='next' value='Next' />
+                                <asp:Button ID="btnFinish" class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='finish' value='Finish' runat="server" Text="Finish" OnClick="btnFinish_Click" />
+                            </div>
+                            <div class="pull-left">
+                                <input type='button' class='btn btn-previous btn-fill btn-default btn-wd btn-sm' name='previous' value='Previous' />
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>	
+                    </form>
+                </div>
+        </div>
+        </div><!-- end row -->
+        
+    </div>
+     <!--  big container -->
+    
+</body>
+
+<script src="../../../Content/CustomCss/Profile/assets/js/jquery-1.10.2.js"></script>
+<script src="../../../Content/CustomCss/Profile/assets/js/bootstrap.min.js"></script>
+		
+	<!--   plugins 	 -->
+<script src="../../../Content/CustomCss/Profile/assets/js/jquery.bootstrap.wizard.js"></script>
+	
+    <!--  More information about jquery.validate here: http://jqueryvalidation.org/	 -->
+<script src="../../../Content/CustomCss/Profile/assets/js/jquery.validate.min.js"></script>
+	
+    <!--  methods for manipulating the wizard and the validation -->
+<script src="../../../Content/CustomCss/Profile/assets/js/wizard.js"></script>
+        <!-- Css for Template -->
+    <script src="../../../Content/Qaelo%20template/js/lightbox.min.js"></script>
+    <script src="../../../Content/Qaelo%20template/js/wow.min.js"></script>
+    <script src="../../../Content/Qaelo%20template/js/main.js"></script>
+        <!-- /Css for Template -->
+
+
+</html>

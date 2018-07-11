@@ -1,0 +1,126 @@
+C:\Users\Koketso\Documents\Tsobang\clients\Qaelo\Website\Qaelo\Qaelo\bin\roslyn\csc.exe
+C:\Users\Koketso\Documents\Tsobang\clients\Qaelo\Website\Qaelo\Qaelo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Koketso\Documents\Tsobang\clients\Qaelo\Website\Qaelo\Qaelo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Koketso\Documents\Tsobang\clients\Qaelo\Website\Qaelo\Qaelo\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Koketso\Documents\Tsobang\clients\Qaelo\Website\Qaelo\Qaelo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Koketso\Documents\Tsobang\clients\Qaelo\Website\Qaelo\Qaelo\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Koketso\Documents\Tsobang\clients\Qaelo\Website\Qaelo\Qaelo\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Koketso\Documents\Tsobang\clients\Qaelo\Website\Qaelo\Qaelo\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Koketso\Documents\Tsobang\clients\Qaelo\Website\Qaelo\Qaelo\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Koketso\Documents\Tsobang\clients\Qaelo\Website\Qaelo\Qaelo\bin\roslyn\vbc.exe
+C:\Users\Koketso\Documents\Tsobang\clients\Qaelo\Website\Qaelo\Qaelo\bin\roslyn\VBCSCompiler.exe
+C:\Users\Koketso\Documents\Tsobang\clients\Qaelo\Website\Qaelo\Qaelo\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Koketso\Documents\Tsobang\clients\Qaelo\Website\Qaelo\Qaelo\bin\Qaelo.dll.config
+C:\Users\Koketso\Documents\Tsobang\clients\Qaelo\Website\Qaelo\Qaelo\bin\Qaelo.dll
+C:\Users\Koketso\Documents\Tsobang\clients\Qaelo\Website\Qaelo\Qaelo\bin\Qaelo.pdb
+C:\Users\Koketso\Documents\Tsobang\clients\Qaelo\Website\Qaelo\Qaelo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Koketso\Documents\Tsobang\clients\Qaelo\Website\Qaelo\Qaelo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Koketso\Documents\Tsobang\clients\Qaelo\Website\Qaelo\Qaelo\obj\Debug\Qaelo.csprojResolveAssemblyReference.cache
+C:\Users\Koketso\Documents\Tsobang\clients\Qaelo\Website\Qaelo\Qaelo\obj\Debug\Qaelo.dll
+C:\Users\Koketso\Documents\Tsobang\clients\Qaelo\Website\Qaelo\Qaelo\obj\Debug\Qaelo.pdb
+F:\Qaelo\Qaelo\bin\roslyn\csc.exe
+F:\Qaelo\Qaelo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Qaelo\Qaelo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Qaelo\Qaelo\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Qaelo\Qaelo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Qaelo\Qaelo\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Qaelo\Qaelo\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Qaelo\Qaelo\bin\roslyn\System.Collections.Immutable.dll
+F:\Qaelo\Qaelo\bin\roslyn\System.Reflection.Metadata.dll
+F:\Qaelo\Qaelo\bin\roslyn\vbc.exe
+F:\Qaelo\Qaelo\bin\roslyn\VBCSCompiler.exe
+F:\Qaelo\Qaelo\bin\roslyn\VBCSCompiler.exe.config
+F:\Qaelo\Qaelo\bin\Qaelo.dll.config
+F:\Qaelo\Qaelo\bin\Qaelo.dll
+F:\Qaelo\Qaelo\bin\Qaelo.pdb
+F:\Qaelo\Qaelo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Qaelo\Qaelo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Qaelo\Qaelo\obj\Debug\Qaelo.csprojResolveAssemblyReference.cache
+F:\Qaelo\Qaelo\obj\Debug\Qaelo.dll
+F:\Qaelo\Qaelo\obj\Debug\Qaelo.pdb
+C:\Users\Thomas-PC\Desktop\Qaelo\Qaelo\bin\roslyn\csc.exe
+C:\Users\Thomas-PC\Desktop\Qaelo\Qaelo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Thomas-PC\Desktop\Qaelo\Qaelo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Thomas-PC\Desktop\Qaelo\Qaelo\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Thomas-PC\Desktop\Qaelo\Qaelo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Thomas-PC\Desktop\Qaelo\Qaelo\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Thomas-PC\Desktop\Qaelo\Qaelo\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Thomas-PC\Desktop\Qaelo\Qaelo\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Thomas-PC\Desktop\Qaelo\Qaelo\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Thomas-PC\Desktop\Qaelo\Qaelo\bin\roslyn\vbc.exe
+C:\Users\Thomas-PC\Desktop\Qaelo\Qaelo\bin\roslyn\VBCSCompiler.exe
+C:\Users\Thomas-PC\Desktop\Qaelo\Qaelo\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Thomas-PC\Desktop\Qaelo\Qaelo\bin\Qaelo.dll.config
+C:\Users\Thomas-PC\Desktop\Qaelo\Qaelo\bin\Qaelo.dll
+C:\Users\Thomas-PC\Desktop\Qaelo\Qaelo\bin\Qaelo.pdb
+C:\Users\Thomas-PC\Desktop\Qaelo\Qaelo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Thomas-PC\Desktop\Qaelo\Qaelo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Thomas-PC\Desktop\Qaelo\Qaelo\obj\Debug\Qaelo.csprojResolveAssemblyReference.cache
+C:\Users\Thomas-PC\Desktop\Qaelo\Qaelo\obj\Debug\Qaelo.dll
+C:\Users\Thomas-PC\Desktop\Qaelo\Qaelo\obj\Debug\Qaelo.pdb
+C:\Users\Thomas-PC\Desktop\Tsobang\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\csc.exe
+C:\Users\Thomas-PC\Desktop\Tsobang\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Thomas-PC\Desktop\Tsobang\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Thomas-PC\Desktop\Tsobang\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Thomas-PC\Desktop\Tsobang\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Thomas-PC\Desktop\Tsobang\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Thomas-PC\Desktop\Tsobang\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Thomas-PC\Desktop\Tsobang\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Thomas-PC\Desktop\Tsobang\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Thomas-PC\Desktop\Tsobang\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\vbc.exe
+C:\Users\Thomas-PC\Desktop\Tsobang\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\VBCSCompiler.exe
+C:\Users\Thomas-PC\Desktop\Tsobang\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Thomas-PC\Desktop\Tsobang\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\Qaelo.dll.config
+C:\Users\Thomas-PC\Desktop\Tsobang\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\Qaelo.dll
+C:\Users\Thomas-PC\Desktop\Tsobang\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\Qaelo.pdb
+C:\Users\Thomas-PC\Desktop\Tsobang\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Thomas-PC\Desktop\Tsobang\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\MySql.Data.DLL
+C:\Users\Thomas-PC\Desktop\Tsobang\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Thomas-PC\Desktop\Tsobang\Project Qaelo\QAELO\Development\Qaelo\Qaelo\obj\Debug\Qaelo.dll
+C:\Users\Thomas-PC\Desktop\Tsobang\Project Qaelo\QAELO\Development\Qaelo\Qaelo\obj\Debug\Qaelo.pdb
+C:\Users\Thomas-PC\Desktop\Tsobang\Project Qaelo\QAELO\Development\Qaelo\Qaelo\obj\Debug\Qaelo.csprojResolveAssemblyReference.cache
+E:\Qaelo\Qaelo\obj\Debug\Qaelo.csprojResolveAssemblyReference.cache
+E:\Qaelo\Qaelo\obj\Debug\Qaelo.dll
+E:\Qaelo\Qaelo\obj\Debug\Qaelo.pdb
+C:\Users\General\Desktop\Qaelo\Qaelo\bin\roslyn\csc.exe
+C:\Users\General\Desktop\Qaelo\Qaelo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\General\Desktop\Qaelo\Qaelo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\General\Desktop\Qaelo\Qaelo\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\General\Desktop\Qaelo\Qaelo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\General\Desktop\Qaelo\Qaelo\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\General\Desktop\Qaelo\Qaelo\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\General\Desktop\Qaelo\Qaelo\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\General\Desktop\Qaelo\Qaelo\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\General\Desktop\Qaelo\Qaelo\bin\roslyn\vbc.exe
+C:\Users\General\Desktop\Qaelo\Qaelo\bin\roslyn\VBCSCompiler.exe
+C:\Users\General\Desktop\Qaelo\Qaelo\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\General\Desktop\Qaelo\Qaelo\bin\Qaelo.dll.config
+C:\Users\General\Desktop\Qaelo\Qaelo\bin\Qaelo.dll
+C:\Users\General\Desktop\Qaelo\Qaelo\bin\Qaelo.pdb
+C:\Users\General\Desktop\Qaelo\Qaelo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\General\Desktop\Qaelo\Qaelo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\General\Desktop\Qaelo\Qaelo\obj\Debug\Qaelo.csprojResolveAssemblyReference.cache
+C:\Users\General\Desktop\Qaelo\Qaelo\obj\Debug\Qaelo.dll
+C:\Users\General\Desktop\Qaelo\Qaelo\obj\Debug\Qaelo.pdb
+C:\Users\Thomas-PC\Desktop\Tsobang\Projects\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\csc.exe
+C:\Users\Thomas-PC\Desktop\Tsobang\Projects\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Thomas-PC\Desktop\Tsobang\Projects\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Thomas-PC\Desktop\Tsobang\Projects\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Thomas-PC\Desktop\Tsobang\Projects\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Thomas-PC\Desktop\Tsobang\Projects\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Thomas-PC\Desktop\Tsobang\Projects\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Thomas-PC\Desktop\Tsobang\Projects\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Thomas-PC\Desktop\Tsobang\Projects\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Thomas-PC\Desktop\Tsobang\Projects\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\vbc.exe
+C:\Users\Thomas-PC\Desktop\Tsobang\Projects\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\VBCSCompiler.exe
+C:\Users\Thomas-PC\Desktop\Tsobang\Projects\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Thomas-PC\Desktop\Tsobang\Projects\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\Qaelo.dll.config
+C:\Users\Thomas-PC\Desktop\Tsobang\Projects\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\Qaelo.dll
+C:\Users\Thomas-PC\Desktop\Tsobang\Projects\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\Qaelo.pdb
+C:\Users\Thomas-PC\Desktop\Tsobang\Projects\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Thomas-PC\Desktop\Tsobang\Projects\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\MySql.Data.dll
+C:\Users\Thomas-PC\Desktop\Tsobang\Projects\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Thomas-PC\Desktop\Tsobang\Projects\Project Qaelo\QAELO\Development\Qaelo\Qaelo\obj\Debug\Qaelo.csprojResolveAssemblyReference.cache
+C:\Users\Thomas-PC\Desktop\Tsobang\Projects\Project Qaelo\QAELO\Development\Qaelo\Qaelo\obj\Debug\Qaelo.dll
+C:\Users\Thomas-PC\Desktop\Tsobang\Projects\Project Qaelo\QAELO\Development\Qaelo\Qaelo\obj\Debug\Qaelo.pdb
+C:\Users\Thomas-PC\Desktop\Tsobang\Projects\Project Qaelo\QAELO\Development\Qaelo\Qaelo\bin\MySql.Data.xml
