@@ -1,0 +1,187 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Accommodation.master.cs" Inherits="Qaelo.Web.Users.Accommodation.Accommodation" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Qaelo,Freelance, sell used textbooks, list student accommodation, list events, list student societies,list shops">
+   
+     <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <link href="../../../Template/css/bootstrap.css" rel="stylesheet" />
+    <link href="../../../Template/css/popuo-box.css" rel="stylesheet" />
+    <link href="../../../Template/css/style.css" rel="stylesheet" />
+    <%--<script src="../../../Template/js/jquery-2.1.4.min.js"></script>--%>
+     <script src="../../../Scripts/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- //js -->
+    <link href='//fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <!-- start-smoth-scrolling -->
+    <script src="../../../Template/js/move-top.js"></script>
+    <script src="../../../Template/js/easing.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" rel="stylesheet"/>
+    <link href="../../../Content/CustomCss/Profile/assets/css/gsdk-base.css" rel="stylesheet" />
+    <script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+    </script>
+               <!--Notify -->
+    <link href="../../../Content/CustomCss/notify/animate.css" rel="stylesheet" />
+    <script src="../../../Content/Qaelo%20template/js/jquery.js"></script>
+    <script src="../../../Content/CustomCss/notify/dist/bootstrap-notify.js"></script>
+    <!--/Notify -->
+
+
+    <!-- Search -->
+           
+    <script src="../../../Scripts/Search/typeahead.bundle.js"></script>
+    <script src="../../../Scripts/Search/universities.js"></script>
+        <style type="text/css">
+.bs-example {
+	font-family: sans-serif;
+	position: relative;
+	margin: 100px;
+}
+.typeahead, .tt-query, .tt-hint {
+
+	font-size: 15px; /* Set input font size */
+	height: 35px;
+	line-height: 30px;
+	outline: medium none;
+	padding: 8px 12px;
+	width: 500px;
+}
+.typeahead {
+	background-color: #FFFFFF;
+}
+.typeahead:focus {
+	
+}
+.tt-query {
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.tt-hint {
+	color: #999999;
+}
+.tt-menu {
+	background-color: #FFFFFF;
+
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	margin-top: 12px;
+	padding: 8px 0;
+	width: 500px;
+}
+.tt-suggestion {
+	font-size: 15px;  /* Set suggestion dropdown font size */
+	padding: 3px 20px;
+    text-align:left;
+}
+.tt-suggestion:hover {
+	cursor: pointer;
+	background-color: #0097CF;
+	color: #FFFFFF;
+}
+.tt-suggestion p {
+	margin: 0;
+}
+</style>
+    <!--/Search -->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- banner -->
+    <div class="accommodation">
+        <div class="container">
+            <nav class="navbar navbar-default">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="logo">
+                        <h3 style="margin-top:10px;" ><a class="navbar-brand" href="../../../">Qaelo</a></h3>
+                    </div>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                    <nav class="link-effect-2" id="link-effect-2">
+                        <ul class="nav navbar-nav">
+                            <li><a href="landlord-room-ads.aspx">Ads<span style="margin-left:3px"class="badge pull-right"><asp:Label ID="lblNoOfAds" runat="server" Text="0"></asp:Label></span></a></li>
+                            <li><a href="landlord-reservations.aspx">Reservations <span style="margin-left:3px" class="badge pull-right"><asp:Label ID="lblNoOfReservations" runat="server" Text="0"></asp:Label></span></a></li>
+                            <li><a href="landlord-list-a-room.aspx">List Room</a></li>
+                            <li><a href="landlord-my-rooms.aspx">Manage Rooms</a></li>
+                            <li><a href="landlord-profile.aspx">Edit Profile</a></li>
+                            <li><a href="../../Account/tempLogin.aspx">Logout</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- /.navbar-collapse -->
+            </nav>
+        </div>
+    </div>
+    <!-- //banner -->
+
+        <div  <%--style="margin-top:60px"--%>>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+
+
+
+    <!-- //footer -->
+    <!-- for bootstrap working -->
+
+    <script src="../../../Template/js/bootstrap.js"></script>
+    <!-- //for bootstrap working -->
+    <!-- here stars scrolling icon -->
+    <script type="text/javascript">
+		$(document).ready(function() {
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+			});
+    </script>
+    <!-- //here ends scrolling icon -->
+
+            <!-- SCRIPTS -->
+     <script>
+         $(document).ready(function () {
+                    $('[data-toggle="tooltip"]').tooltip(); 
+                });
+         </script> 
+    <!-- JQuery -->
+    
+    <!-- Bootstrap tooltips -->
+    <script src="../../../Scripts/Search/tether.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    	<!--   plugins 	 -->
+<script src="../../../Content/CustomCss/Profile/assets/js/jquery.bootstrap.wizard.js"></script>
+	
+    <!--  More information about jquery.validate here: http://jqueryvalidation.org/	 -->
+<script src="../../../Content/CustomCss/Profile/assets/js/jquery.validate.min.js"></script>
+	
+    <!--  methods for manipulating the wizard and the validation -->
+<script src="../../../Content/CustomCss/Profile/assets/js/wizard.js"></script>
+</body>
+</html>
+
+
+
+

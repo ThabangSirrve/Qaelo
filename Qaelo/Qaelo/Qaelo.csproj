@@ -1,0 +1,870 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{279DD455-93EE-4A0F-B4FD-19A81BFF5609}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Qaelo</RootNamespace>
+    <AssemblyName>Qaelo</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\..\Sirrve\Projects\Utility Folder\MySql.Data\MySql.Data.DLL</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\CustomCss\animate.min.css" />
+    <Content Include="Content\CustomCss\bootstrap.min.css" />
+    <Content Include="Content\CustomCss\checkboxes.css" />
+    <Content Include="Content\CustomCss\demo.css" />
+    <Content Include="Content\CustomCss\imagehover\imagehover.css" />
+    <Content Include="Content\CustomCss\light-bootstrap-dashboard.css" />
+    <Content Include="Content\CustomCss\ListPlace\assets\css\bootstrap.min.css" />
+    <Content Include="Content\CustomCss\ListPlace\assets\css\gsdk-base.css" />
+    <Content Include="Content\CustomCss\ListPlace\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\CustomCss\ListPlace\assets\js\bootstrap.min.js" />
+    <Content Include="Content\CustomCss\ListPlace\assets\js\jquery-1.10.2.js" />
+    <Content Include="Content\CustomCss\ListPlace\assets\js\jquery.bootstrap.wizard.js" />
+    <Content Include="Content\CustomCss\ListPlace\assets\js\jquery.validate.min.js" />
+    <Content Include="Content\CustomCss\ListPlace\assets\js\wizard.js" />
+    <Content Include="Content\CustomCss\ListPlace\imageUpload.css" />
+    <Content Include="Content\CustomCss\Login\login.css" />
+    <Content Include="Content\CustomCss\Login\Login.js" />
+    <Content Include="Content\CustomCss\notify\animate.css" />
+    <Content Include="Content\CustomCss\notify\bootstrap-notify.js" />
+    <Content Include="Content\CustomCss\notify\bootstrap-notify.min.js" />
+    <Content Include="Content\CustomCss\notify\dist\bootstrap-notify.js" />
+    <Content Include="Content\CustomCss\notify\dist\bootstrap-notify.min.js" />
+    <Content Include="Content\CustomCss\notify\Gruntfile.js" />
+    <Content Include="Content\CustomCss\notify\jquery.js" />
+    <Content Include="Content\CustomCss\notify\package.js" />
+    <Content Include="Content\CustomCss\notify\test_meteor.js" />
+    <Content Include="Content\CustomCss\Profile\assets\css\bootstrap.min.css" />
+    <Content Include="Content\CustomCss\Profile\assets\css\gsdk-base.css" />
+    <Content Include="Content\CustomCss\Profile\assets\img\default-avatar.png" />
+    <Content Include="Content\CustomCss\Profile\assets\img\favicon.ico" />
+    <Content Include="Content\CustomCss\Profile\assets\img\new_logo.png" />
+    <Content Include="Content\CustomCss\Profile\assets\img\thumb_list_boat.png" />
+    <Content Include="Content\CustomCss\Profile\assets\img\thumb_list_place.png" />
+    <Content Include="Content\CustomCss\Profile\assets\img\thumb_register.png" />
+    <Content Include="Content\CustomCss\Profile\assets\img\tim_80x80.png" />
+    <Content Include="Content\CustomCss\Profile\assets\img\wizard-boat.jpg" />
+    <Content Include="Content\CustomCss\Profile\assets\img\wizard-city.jpg" />
+    <Content Include="Content\CustomCss\Profile\assets\img\wizard.jpg" />
+    <Content Include="Content\CustomCss\Profile\assets\js\bootstrap.min.js" />
+    <Content Include="Content\CustomCss\Profile\assets\js\jquery-1.10.2.js" />
+    <Content Include="Content\CustomCss\Profile\assets\js\jquery.bootstrap.wizard.js" />
+    <Content Include="Content\CustomCss\Profile\assets\js\jquery.validate.min.js" />
+    <Content Include="Content\CustomCss\Profile\assets\js\wizard.js" />
+    <Content Include="Content\CustomCss\w3.css" />
+    <Content Include="Content\fontawesome-stars.css" />
+    <Content Include="default.aspx" />
+    <Content Include="Email\Image_1.png" />
+    <Content Include="Email\Image_2.png" />
+    <Content Include="Email\Image_3.png" />
+    <Content Include="Email\Image_4.png" />
+    <Content Include="Email\Image_5.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="getDirections.png" />
+    <Content Include="google674cf04a39ec4fe6.html" />
+    <Content Include="Images\Advertisers\IMG-20171031-WA0008.jpg" />
+    <Content Include="Images\Book\default.jpg" />
+    <Content Include="Images\Company\defaultProfilePic.jpg" />
+    <Content Include="Images\Convinience\eto.png" />
+    <Content Include="Images\Convinience\EToro_logo_facebook_profile.jpg" />
+    <Content Include="Images\Convinience\getor.jpg" />
+    <Content Include="Images\Convinience\getSmarter.png" />
+    <Content Include="Images\Convinience\Huawei.png" />
+    <Content Include="Images\Convinience\Netflix.png" />
+    <Content Include="Images\Convinience\nike.jpg" />
+    <Content Include="Images\Convinience\STATravel.jpg" />
+    <Content Include="Images\Convinience\uber.jpg" />
+    <Content Include="Images\Convinience\ups.png" />
+    <Content Include="Images\Events\default.jpg" />
+    <Content Include="Images\Freelancer\default.jpg" />
+    <Content Include="Images\Shops\defaultProfilePic.jpg" />
+    <Content Include="Images\Scociety\defaultProfilePic.jpg" />
+    <Content Include="Images\Shops\Specials\defaultProfilePic.jpg" />
+    <Content Include="Images\Students\defaultProfilePic.jpg" />
+    <Content Include="Images\Users\Accommodation\defaultProfilePic.jpg" />
+    <Content Include="Images\Users\Company\defaultCompany.jpg" />
+    <Content Include="Images\Users\Company\defaultProfilePic.jpg" />
+    <Content Include="Images\Users\error.png" />
+    <Content Include="Images\Users\loginBack.jpg" />
+    <Content Include="Images\Users\Shops\defaultCompany.jpg" />
+    <Content Include="Images\Users\Socities\defaultProfilePic.jpg" />
+    <Content Include="Images\Users\Students\defaultProfilePic.jpg" />
+    <Content Include="Images\Users\Verified.png" />
+    <Content Include="logo-content.png" />
+    <Content Include="logo.png" />
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\CustomCss\ListPlace\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\CustomCss\ListPlace\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\CustomCss\ListPlace\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\CustomCss\ListPlace\assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\CustomCss\notify\bower.json" />
+    <Content Include="Content\CustomCss\notify\composer.json" />
+    <Content Include="Content\CustomCss\notify\jshintrc.json" />
+    <Content Include="Content\CustomCss\notify\package.json" />
+    <Content Include="Content\CustomCss\notify\.gitignore" />
+    <Content Include="Content\CustomCss\notify\LICENSE" />
+    <Content Include="Content\CustomCss\notify\README.md" />
+    <Content Include="Scripts\jquery.barrating.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\Search\tether.min.js" />
+    <Content Include="Scripts\Search\typeahead.bundle.js" />
+    <Content Include="Scripts\Search\universities.js" />
+    <Content Include="Template\Wizard\script.js" />
+    <Content Include="Template\Wizard\style.css" />
+    <Content Include="Template\css\bootstrap.css" />
+    <Content Include="Template\css\popuo-box.css" />
+    <Content Include="Template\css\style.css" />
+    <Content Include="Template\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Template\images\1.jpg" />
+    <Content Include="Template\images\11.jpg" />
+    <Content Include="Template\images\2.jpg" />
+    <Content Include="Template\images\3.jpg" />
+    <Content Include="Template\images\4.jpg" />
+    <Content Include="Template\images\5.jpg" />
+    <Content Include="Template\images\absa.jpg" />
+    <Content Include="Template\images\arrow.png" />
+    <Content Include="Template\images\banner.jpg" />
+    <Content Include="Template\images\db.jpg" />
+    <Content Include="Template\images\Greyhound.jpeg" />
+    <Content Include="Template\images\ic.jpeg" />
+    <Content Include="Template\images\img-sp.png" />
+    <Content Include="Template\images\Mango.png" />
+    <Content Include="Template\images\mrp.png" />
+    <Content Include="Template\images\pnp.jpg" />
+    <Content Include="Template\images\QaeloQompetition.jpg" />
+    <Content Include="Template\images\SK.jpeg" />
+    <Content Include="Template\images\uber.jpeg" />
+    <Content Include="Template\js\bootstrap.js" />
+    <Content Include="Template\js\easing.js" />
+    <Content Include="Template\js\jquery-2.1.4.min.js" />
+    <Content Include="Template\js\jquery.magnific-popup.js" />
+    <Content Include="Template\js\jquery.zbox.min.js" />
+    <Content Include="Template\js\move-top.js" />
+    <Content Include="Web\Account\facebook-login.aspx" />
+    <Content Include="Web\Account\tempLogin.aspx" />
+    <Content Include="Web\Users\Accommodation\landlord-edit-room.aspx" />
+    <Content Include="Web\Users\Accommodation\landlord-list-a-room.aspx" />
+    <Content Include="Web\Users\Accommodation\landlord-profile.aspx" />
+    <Content Include="Web\Users\Accommodation\landlord-reservations.aspx" />
+    <Content Include="Web\Users\Accommodation\landlord-room-ads.aspx" />
+    <Content Include="Web\Users\Admin\unConfirmAccount.aspx" />
+    <Content Include="Web\Users\CommunityMember\member-profile.aspx" />
+    <Content Include="Web\Users\EventPoster\EditEvent.aspx" />
+    <Content Include="Web\Users\EventPoster\EditProfile.aspx" />
+    <Content Include="Web\Users\EventPoster\ManageEvents.aspx" />
+    <Content Include="Web\Users\EventPoster\PostEvent.aspx" />
+    <Content Include="Web\Users\EventPoster\Sellticket.aspx" />
+    <Content Include="Web\Users\Shop\createAd.aspx" />
+    <Content Include="Web\Users\Shop\EditProfile.aspx" />
+    <Content Include="Web\Users\Shop\EditShop.aspx" />
+    <Content Include="Web\Users\Shop\EditSpecial.aspx" />
+    <Content Include="Web\Users\Shop\ListShop.aspx" />
+    <Content Include="Web\Users\Society\EditEvent.aspx" />
+    <Content Include="Web\Users\Society\EditProfile.aspx" />
+    <Content Include="Web\Users\Society\ListEvent.aspx" />
+    <Content Include="Web\Users\Student\student-accommodation.aspx" />
+    <Content Include="Web\Users\Student\student-edit-profile.aspx" />
+    <Content Include="Web\Users\Student\students-add-work.aspx" />
+    <Content Include="Web\Users\Student\students-book-a-room.aspx" />
+    <Content Include="Web\Users\Student\students-event.aspx" />
+    <Content Include="Web\Users\Student\students-freelancer.aspx" />
+    <Content Include="Web\Users\Student\students-room.aspx" />
+    <Content Include="Web\Users\Student\students-profile.aspx" />
+    <Content Include="Web\Users\Student\students-advertise-on-landloards-profile.aspx" />
+    <Content Include="Web\Users\Student\students-buy-textbooks.aspx" />
+    <Content Include="Web\Users\Student\students-edit-books.aspx" />
+    <Content Include="Web\Users\Student\students-freelancers.aspx" />
+    <Content Include="Web\Users\Student\students-sell-textbooks.aspx" />
+    <Content Include="Web\Users\Student\students-shops.aspx" />
+    <Content Include="Content\CustomCss\Profile\assets\css\.DS_Store" />
+    <Content Include="Content\CustomCss\Profile\assets\img\.DS_Store" />
+    <Content Include="Content\CustomCss\Profile\assets\js\.DS_Store" />
+    <None Include="Properties\PublishProfiles\FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\qaelo.com - Web Deploy.pubxml" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\imageUpload.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Template\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Template\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Template\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Template\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="Web\Account\Confirm.aspx" />
+    <Content Include="Web\Account\PasswordRecovery.aspx" />
+    <Content Include="Web\Account\PrivacyPolicy.aspx" />
+    <Content Include="Web\Account\Registration.aspx" />
+    <Content Include="Web\Account\SendPasswordRecovery.aspx" />
+    <Content Include="Web\Account\TermsOfUse.aspx" />
+    <Content Include="Web\Users\Accommodation\Accommodation.Master" />
+    <Content Include="Web\Users\Accommodation\landlord-home.aspx" />
+    <Content Include="Web\Users\Accommodation\landlord-my-rooms.aspx" />
+    <Content Include="Web\Users\Admin\ConfirmAccount.aspx" />
+    <Content Include="Web\Users\Admin\ListOfUsers.aspx" />
+    <Content Include="Web\Users\Company\EditPost.aspx" />
+    <Content Include="Web\Users\Company\EditProfile.aspx" />
+    <Content Include="Web\Users\Company\Home.aspx" />
+    <Content Include="Web\Users\Company\ManagePostings.aspx" />
+    <Content Include="Web\Users\Company\Post.aspx" />
+    <Content Include="Web\Users\EventPoster\EventPoster.Master" />
+    <Content Include="Web\Users\EventPoster\Home.aspx" />
+    <Content Include="Web\Users\Shop\Home.aspx" />
+    <Content Include="Web\Users\Shop\ManageListings.aspx" />
+    <Content Include="Web\Users\Shop\Shop.Master" />
+    <Content Include="Web\Users\Society\Home.aspx" />
+    <Content Include="Web\Users\Society\ManageEvents.aspx" />
+    <Content Include="Web\Users\Society\ManageProfile.aspx" />
+    <Content Include="Web\Users\Society\PostProfile.aspx" />
+    <Content Include="Web\Users\Society\Society.Master" />
+    <Content Include="Web\Users\Student\students-events.aspx" />
+    <Content Include="Web\Users\Student\students-societies.aspx" />
+    <Content Include="Web\Account\Account.Master" />
+    <Content Include="Web\Users\Company\Company.Master" />
+    <Content Include="Web\Users\Student\template.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\AccommodationData\AccommodationConnection.cs" />
+    <Compile Include="Data\AccommodationData\ManagerConnection.cs" />
+    <Compile Include="Data\Accounts\AccountConnection.cs" />
+    <Compile Include="Data\CompanyData\CompanyConnection.cs" />
+    <Compile Include="Data\Connection.cs" />
+    <Compile Include="Data\EventsData\EventConnection.cs" />
+    <Compile Include="Data\ShopData\ShopConnection.cs" />
+    <Compile Include="Data\SocietyData\SocietyConnection.cs" />
+    <Compile Include="Data\StudentData\StudentConnection.cs" />
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccommodationModel\Accommodation.cs" />
+    <Compile Include="Models\AccommodationModel\Manager.cs" />
+    <Compile Include="Models\AccommodationModel\Reservation.cs" />
+    <Compile Include="Models\AccommodationModel\RoomAd.cs" />
+    <Compile Include="Models\AccountModel\EmailNotification.cs" />
+    <Compile Include="Models\AccountModel\FacebookUser.cs" />
+    <Compile Include="Models\CompanyModel\Company.cs" />
+    <Compile Include="Models\CompanyModel\Job.cs" />
+    <Compile Include="Models\EventPosterModel\EventPoster.cs" />
+    <Compile Include="Models\EventPosterModel\MyEvent.cs" />
+    <Compile Include="Models\EventPosterModel\TicketModel.cs" />
+    <Compile Include="Models\Freelancer\PreviousWork.cs" />
+    <Compile Include="Models\ShopOwnerModel\Shop.cs" />
+    <Compile Include="Models\ShopOwnerModel\ShopAds.cs" />
+    <Compile Include="Models\ShopOwnerModel\ShopOwner.cs" />
+    <Compile Include="Models\SocietyModel\Society.cs" />
+    <Compile Include="Models\StudentModel\Book.cs" />
+    <Compile Include="Models\StudentModel\Freelancer.cs" />
+    <Compile Include="Models\StudentModel\Student.cs" />
+    <Compile Include="Models\Utility\General.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\CryptoService.cs" />
+    <Compile Include="Security\ICryptoService.cs" />
+    <Compile Include="Security\Secrecy.cs" />
+    <Compile Include="Web\Account\Account.Master.cs">
+      <DependentUpon>Account.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Account\Account.Master.designer.cs">
+      <DependentUpon>Account.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Account\Confirm.aspx.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Account\Confirm.aspx.designer.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Account\facebook-login.aspx.cs">
+      <DependentUpon>facebook-login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Account\facebook-login.aspx.designer.cs">
+      <DependentUpon>facebook-login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Account\PasswordRecovery.aspx.cs">
+      <DependentUpon>PasswordRecovery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Account\PasswordRecovery.aspx.designer.cs">
+      <DependentUpon>PasswordRecovery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Account\PrivacyPolicy.aspx.cs">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Account\PrivacyPolicy.aspx.designer.cs">
+      <DependentUpon>PrivacyPolicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Account\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Account\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Account\SendPasswordRecovery.aspx.cs">
+      <DependentUpon>SendPasswordRecovery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Account\SendPasswordRecovery.aspx.designer.cs">
+      <DependentUpon>SendPasswordRecovery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Account\tempLogin.aspx.cs">
+      <DependentUpon>tempLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Account\tempLogin.aspx.designer.cs">
+      <DependentUpon>tempLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Account\TermsOfUse.aspx.cs">
+      <DependentUpon>TermsOfUse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Account\TermsOfUse.aspx.designer.cs">
+      <DependentUpon>TermsOfUse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Accommodation\Accommodation.Master.cs">
+      <DependentUpon>Accommodation.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Accommodation\Accommodation.Master.designer.cs">
+      <DependentUpon>Accommodation.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Accommodation\landlord-edit-room.aspx.cs">
+      <DependentUpon>landlord-edit-room.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Accommodation\landlord-edit-room.aspx.designer.cs">
+      <DependentUpon>landlord-edit-room.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Accommodation\landlord-home.aspx.cs">
+      <DependentUpon>landlord-home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Accommodation\landlord-home.aspx.designer.cs">
+      <DependentUpon>landlord-home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Accommodation\landlord-list-a-room.aspx.cs">
+      <DependentUpon>landlord-list-a-room.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Accommodation\landlord-list-a-room.aspx.designer.cs">
+      <DependentUpon>landlord-list-a-room.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Accommodation\landlord-my-rooms.aspx.cs">
+      <DependentUpon>landlord-my-rooms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Accommodation\landlord-my-rooms.aspx.designer.cs">
+      <DependentUpon>landlord-my-rooms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Accommodation\landlord-profile.aspx.cs">
+      <DependentUpon>landlord-profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Accommodation\landlord-profile.aspx.designer.cs">
+      <DependentUpon>landlord-profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Accommodation\landlord-reservations.aspx.cs">
+      <DependentUpon>landlord-reservations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Accommodation\landlord-reservations.aspx.designer.cs">
+      <DependentUpon>landlord-reservations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Accommodation\landlord-room-ads.aspx.cs">
+      <DependentUpon>landlord-room-ads.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Accommodation\landlord-room-ads.aspx.designer.cs">
+      <DependentUpon>landlord-room-ads.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Admin\ConfirmAccount.aspx.cs">
+      <DependentUpon>ConfirmAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Admin\ConfirmAccount.aspx.designer.cs">
+      <DependentUpon>ConfirmAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Admin\ListOfUsers.aspx.cs">
+      <DependentUpon>ListOfUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Admin\ListOfUsers.aspx.designer.cs">
+      <DependentUpon>ListOfUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Admin\unConfirmAccount.aspx.cs">
+      <DependentUpon>unConfirmAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Admin\unConfirmAccount.aspx.designer.cs">
+      <DependentUpon>unConfirmAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\CommunityMember\member-profile.aspx.cs">
+      <DependentUpon>member-profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\CommunityMember\member-profile.aspx.designer.cs">
+      <DependentUpon>member-profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Company\Company.Master.cs">
+      <DependentUpon>Company.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Company\Company.Master.designer.cs">
+      <DependentUpon>Company.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Company\EditPost.aspx.cs">
+      <DependentUpon>EditPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Company\EditPost.aspx.designer.cs">
+      <DependentUpon>EditPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Company\EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Company\EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Company\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Company\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Company\ManagePostings.aspx.cs">
+      <DependentUpon>ManagePostings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Company\ManagePostings.aspx.designer.cs">
+      <DependentUpon>ManagePostings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Company\Post.aspx.cs">
+      <DependentUpon>Post.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Company\Post.aspx.designer.cs">
+      <DependentUpon>Post.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\EventPoster\EditEvent.aspx.cs">
+      <DependentUpon>EditEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\EventPoster\EditEvent.aspx.designer.cs">
+      <DependentUpon>EditEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\EventPoster\EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\EventPoster\EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\EventPoster\EventPoster.Master.cs">
+      <DependentUpon>EventPoster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\EventPoster\EventPoster.Master.designer.cs">
+      <DependentUpon>EventPoster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\EventPoster\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\EventPoster\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\EventPoster\ManageEvents.aspx.cs">
+      <DependentUpon>ManageEvents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\EventPoster\ManageEvents.aspx.designer.cs">
+      <DependentUpon>ManageEvents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\EventPoster\PostEvent.aspx.cs">
+      <DependentUpon>PostEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\EventPoster\PostEvent.aspx.designer.cs">
+      <DependentUpon>PostEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\EventPoster\Sellticket.aspx.cs">
+      <DependentUpon>Sellticket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\EventPoster\Sellticket.aspx.designer.cs">
+      <DependentUpon>Sellticket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Shop\createAd.aspx.cs">
+      <DependentUpon>createAd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Shop\createAd.aspx.designer.cs">
+      <DependentUpon>createAd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Shop\EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Shop\EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Shop\EditShop.aspx.cs">
+      <DependentUpon>EditShop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Shop\EditShop.aspx.designer.cs">
+      <DependentUpon>EditShop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Shop\EditSpecial.aspx.cs">
+      <DependentUpon>EditSpecial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Shop\EditSpecial.aspx.designer.cs">
+      <DependentUpon>EditSpecial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Shop\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Shop\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Shop\ListShop.aspx.cs">
+      <DependentUpon>ListShop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Shop\ListShop.aspx.designer.cs">
+      <DependentUpon>ListShop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Shop\ManageListings.aspx.cs">
+      <DependentUpon>ManageListings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Shop\ManageListings.aspx.designer.cs">
+      <DependentUpon>ManageListings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Shop\Shop.Master.cs">
+      <DependentUpon>Shop.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Shop\Shop.Master.designer.cs">
+      <DependentUpon>Shop.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Society\EditEvent.aspx.cs">
+      <DependentUpon>EditEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Society\EditEvent.aspx.designer.cs">
+      <DependentUpon>EditEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Society\EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Society\EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Society\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Society\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Society\ListEvent.aspx.cs">
+      <DependentUpon>ListEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Society\ListEvent.aspx.designer.cs">
+      <DependentUpon>ListEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Society\ManageEvents.aspx.cs">
+      <DependentUpon>ManageEvents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Society\ManageEvents.aspx.designer.cs">
+      <DependentUpon>ManageEvents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Society\ManageProfile.aspx.cs">
+      <DependentUpon>ManageProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Society\ManageProfile.aspx.designer.cs">
+      <DependentUpon>ManageProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Society\PostProfile.aspx.cs">
+      <DependentUpon>PostProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Society\PostProfile.aspx.designer.cs">
+      <DependentUpon>PostProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Society\Society.Master.cs">
+      <DependentUpon>Society.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Society\Society.Master.designer.cs">
+      <DependentUpon>Society.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Student\student-accommodation.aspx.cs">
+      <DependentUpon>student-accommodation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Student\student-accommodation.aspx.designer.cs">
+      <DependentUpon>student-accommodation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Student\student-edit-profile.aspx.cs">
+      <DependentUpon>student-edit-profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Student\student-edit-profile.aspx.designer.cs">
+      <DependentUpon>student-edit-profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-add-work.aspx.cs">
+      <DependentUpon>students-add-work.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-add-work.aspx.designer.cs">
+      <DependentUpon>students-add-work.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-book-a-room.aspx.cs">
+      <DependentUpon>students-book-a-room.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-book-a-room.aspx.designer.cs">
+      <DependentUpon>students-book-a-room.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-event.aspx.cs">
+      <DependentUpon>students-event.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-event.aspx.designer.cs">
+      <DependentUpon>students-event.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-events.aspx.cs">
+      <DependentUpon>students-events.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-events.aspx.designer.cs">
+      <DependentUpon>students-events.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-freelancer.aspx.cs">
+      <DependentUpon>students-freelancer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-freelancer.aspx.designer.cs">
+      <DependentUpon>students-freelancer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-room.aspx.cs">
+      <DependentUpon>students-room.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-room.aspx.designer.cs">
+      <DependentUpon>students-room.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-sell-textbooks.aspx.cs">
+      <DependentUpon>students-sell-textbooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-sell-textbooks.aspx.designer.cs">
+      <DependentUpon>students-sell-textbooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-societies.aspx.cs">
+      <DependentUpon>students-societies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-societies.aspx.designer.cs">
+      <DependentUpon>students-societies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-profile.aspx.cs">
+      <DependentUpon>students-profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-profile.aspx.designer.cs">
+      <DependentUpon>students-profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-advertise-on-landloards-profile.aspx.cs">
+      <DependentUpon>students-advertise-on-landloards-profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-advertise-on-landloards-profile.aspx.designer.cs">
+      <DependentUpon>students-advertise-on-landloards-profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-buy-textbooks.aspx.cs">
+      <DependentUpon>students-buy-textbooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-buy-textbooks.aspx.designer.cs">
+      <DependentUpon>students-buy-textbooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-edit-books.aspx.cs">
+      <DependentUpon>students-edit-books.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-edit-books.aspx.designer.cs">
+      <DependentUpon>students-edit-books.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-freelancers.aspx.cs">
+      <DependentUpon>students-freelancers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-freelancers.aspx.designer.cs">
+      <DependentUpon>students-freelancers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-shops.aspx.cs">
+      <DependentUpon>students-shops.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Student\students-shops.aspx.designer.cs">
+      <DependentUpon>students-shops.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Student\template.Master.cs">
+      <DependentUpon>template.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Student\template.Master.designer.cs">
+      <DependentUpon>template.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\Accommodation\" />
+    <Folder Include="Web\Home\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53020</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53020/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

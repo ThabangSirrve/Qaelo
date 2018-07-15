@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="conString-Web.config Connection String" description="conString Connection String used in web.config by the application to access the database." defaultValue="Database=tsobangc_qaelodb;Data source=localhost;User Id=tsoba_quser;Password=o?B0o85o" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Thomas-PC\\Desktop\\Tsobang\\Projects\\Project\ Qaelo\\QAELO\\Development\\Qaelo\\Qaelo\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='conString']/@connectionString" />
+  </parameter>
+</parameters>
