@@ -120,7 +120,7 @@ namespace Qaelo.Web.Account
                     if (Request.QueryString["page"] != null && Request.QueryString["page"].ToString().Contains("Student"))
                         Response.Redirect("~/Web/" + Request.QueryString["page"].ToString());
 
-                    Response.Redirect("~/Web/Users/CommunityMember/member-profile.aspx");
+                    Response.Redirect("~/Web/Users/Student/students-profile.aspx");
                 }
                 else if (connection.correctShopOwner(txtEmail.Text, Secrecy.HashPassword(txtPassword.Text)))
                 {
@@ -129,7 +129,7 @@ namespace Qaelo.Web.Account
                     if (Request.QueryString["page"] != null && Request.QueryString["page"].ToString().Contains("Shop"))
                         Response.Redirect("~/Web/" + Request.QueryString["page"].ToString());
 
-                    Response.Redirect("~/Web/Users/Shop/Home.aspx");
+                    Response.Redirect("~/Web/Users/Facility/manage-facilities.aspx");
                 }
                 else if (connection.correctEventPoster(txtEmail.Text, Secrecy.HashPassword(txtPassword.Text)))
                 {

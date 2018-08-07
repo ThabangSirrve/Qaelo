@@ -19,7 +19,7 @@ namespace Qaelo.Web.Users.Student
         {
             if (Session["STUDENT"] == null)
             {
-                Response.Redirect("~/Web/Account/tempLogin.aspx?page=Users/Student/students-profile.aspx");
+                Response.Redirect("~/Web/Account/tempLogin.aspx?page=Users/student/students-profile.aspx");
             }
 
             Qaelo.Models.StudentModel.Student student = (Qaelo.Models.StudentModel.Student)Session["STUDENT"];
@@ -28,7 +28,7 @@ namespace Qaelo.Web.Users.Student
 
             if (Request.QueryString["page"] != null)
             {
-                if(Request.QueryString["page"] == "sellbooks")
+                if (Request.QueryString["page"] == "sellbooks")
                 {
                     lblSuccess.Text = "You have successfully Posted your used textbook";
                 }
@@ -44,7 +44,7 @@ namespace Qaelo.Web.Users.Student
                 {
                     lblSuccess.Text = "You have successfully updated your book";
                 }
-                else if(Request.QueryString["page"].Equals("previousWork"))
+                else if (Request.QueryString["page"].Equals("previousWork"))
                 {
                     lblSuccess.Text = "Successfully added your previous work";
                 }
@@ -59,7 +59,7 @@ namespace Qaelo.Web.Users.Student
             }
             else if (Request.QueryString["enable"] != null)
             {
-                //Insert Profile into Societies table 
+                //Insert Profile into active profiles table 
                 if (!connection.isProfilePublic(Convert.ToInt32(Request.QueryString["enable"])))
                     connection.uploadStudentProfile(student);
 
@@ -92,14 +92,16 @@ namespace Qaelo.Web.Users.Student
 
             if (connection.isProfilePublic(student.Id))
             {
+                //Profile link 
+                string link = student.FirstName + "-" + student.LastName;
                 //if a student is a freelancer then include it here
                 Qaelo.Models.StudentModel.Freelancer fl = connection.Freelancer(student.Id);
                 string freelancer = "";
 
                 if (fl != null)
-                   freelancer = "<h6>Freelancer :</h6><small style='font-size:12px'>" + fl.Work.Replace(';','\n') +"</small>";
+                    freelancer = "<h6>Freelancer :<small style='font-size:12px'>" + fl.Work.Replace(';', '\n') + "</small></h6>";
 
-                string proficePic = "../../../Images/Users/Students/"+student.ProfileImage;
+                string proficePic = "../../../Images/Users/Students/" + student.ProfileImage;
 
                 if (student.ProfileImage.Contains("http"))
                     proficePic = student.ProfileImage;
@@ -114,27 +116,28 @@ namespace Qaelo.Web.Users.Student
                           </figcaption>
                            </figure>
                     <div class='w3-container' style='margin:10px'>
-                        <h6 style='margin-bottom:10px'><b>{2}- <small style='font-size:12px'>{3}</small></b></h6>
-                        <h6 style='margin-bottom:10px'>Course Enrolled:<small style='font-size:12px'>{4}</small></h6>
-                        <h6 style='margin-bottom:10px'>Year Of Study : <small style='font-size:12px'>{5}</small></h6>
-                        <h6 style='margin-bottom:10px'>Email :<small style='font-size:12px'>{6}</small></h6>
-                        {7}<br/><br/>
+                        <h6 style='margin-bottom:10px'><b>{2}</b></h6>{7}
+                        <h6 style='margin-bottom:10px'>Location:<small style='font-size:12px'>{3}</small></h6>
+                        <h6 style='margin-bottom:10px'>Link :<a style='font-size:12px' href='{6}'>{6}</a></h6>
                       <a href='students-profile.aspx?disable={8}' class='btn btn-danger pull-right form-control'>Go Private!</a>
                         <br /><br/>
                     </div>
                   </div>
                 </div>
                     
-            ", proficePic, student.Description, student.FirstName +" " + student.LastName, student.Institution, student.QualificationEnrolled, student.YearOfStudy, student.Email,freelancer,student.Id);
+            ", proficePic, student.Description, student.FirstName + " " + student.LastName, student.Institution, student.QualificationEnrolled, student.YearOfStudy, "http://qaelo.com/profile?p=" + link.ToLower(), freelancer, student.Id);
 
             }
             else
             {
+                //Profile link 
+                string link = student.FirstName + "-" + student.LastName;
+                //if a student is a freelancer then include it here
                 Qaelo.Models.StudentModel.Freelancer fl = connection.Freelancer(student.Id);
                 string freelancer = "";
 
                 if (fl != null)
-                    freelancer = "<h6>Freelancer :</h6><small style='font-size:12px'>" + fl.Work.Replace(';', '\n') + "</small>";
+                    freelancer = "<h6>Freelancer :<small style='font-size:12px'>" + fl.Work.Replace(';', '\n') + "</small></h6>";
 
 
                 string proficePic = "../../../Images/Users/Students/" + student.ProfileImage;
@@ -152,18 +155,16 @@ namespace Qaelo.Web.Users.Student
                           </figcaption>
                            </figure>
                     <div class='w3-container' style='margin:10px'>
-                        <h6 style='margin-bottom:10px'><b>{2}- <small style='font-size:12px'>{3}</small></b></h6>
-                        <h6 style='margin-bottom:10px'>Course Enrolled:<small style='font-size:12px'>{4}</small></h6>
-                        <h6 style='margin-bottom:10px'>Year Of Study : <small style='font-size:12px'>{5}</small></h6>
-                        <h6 style='margin-bottom:10px'>Email :<small style='font-size:12px'>{6}</small></h6>
-                        {7}<br/><br/>
+                        <h6 style='margin-bottom:10px'><b>{2}</b></h6>{7}
+                        <h6 style='margin-bottom:10px'>Location:<small style='font-size:12px'>{3}</small></h6>
+                        <h6 style='margin-bottom:10px'>Link :<a style='font-size:12px' href='{6}'>{6}</a></h6>
                       <a href='students-profile.aspx?enable={8}' class='btn btn-success pull-right form-control'>Go Public!</a>
                         <br /><br/>
                     </div>
                   </div>
                 </div>
                    
-            ", proficePic, student.Description, student.FirstName + " " + student.LastName, student.Institution, student.QualificationEnrolled, student.YearOfStudy, student.Email,freelancer, student.Id);
+            ", proficePic, student.Description, student.FirstName + " " + student.LastName, student.Institution, student.QualificationEnrolled,"", "http://qaelo.com/profile?p=" + link.ToLower(), freelancer, student.Id);
             }
             lblProfileView.Text = html;
 
@@ -177,77 +178,77 @@ namespace Qaelo.Web.Users.Student
             /*** load rooms ads ***/
 
 
-            List<RoomAd> ads = new AccommodationConnection().getRoomAds(student.Id);
+            //List<RoomAd> ads = new AccommodationConnection().getRoomAds(student.Id);
 
-            //set what to appear on advertise on landlords 
-            if(ads.Count > 0)
-            {
-                //Fill in   
-                lblRoomAds.Text = "";
-                foreach (RoomAd item in ads)
-                {
-                    lblRoomAds.Text += string.Format(@"<tr>
-                                                <td>{0}</td>
-                                                <td>{1}</td>
-                                                <td>{2}</td>
-                                                <td>{3}</td>
-                                                <td>{4}</td>
-                                                <td><a href='students-profile.aspx?removeAd={5}' class='btn btn-danger'>remove</a></td>
-                                            </tr>", General.getDateString(item.DatePosted),item.Arrangement,item.Gender,item.PaymentType,item.RentAmount,item.Id);
-                }
-                lblNumAdds.Text = ads.Count.ToString();
-                //Set view to be current ads
-                setView.HRef = "#viewAdd";
-            }
-            else
-            {
-                //Fill some fields
-                txtPhone.Text = student.Number;
+            ////set what to appear on advertise on landlords 
+            //if (ads.Count > 0)
+            //{
+            //    //Fill in   
+            //    lblRoomAds.Text = "";
+            //    foreach (RoomAd item in ads)
+            //    {
+            //        lblRoomAds.Text += string.Format(@"<tr>
+            //                                    <td>{0}</td>
+            //                                    <td>{1}</td>
+            //                                    <td>{2}</td>
+            //                                    <td>{3}</td>
+            //                                    <td>{4}</td>
+            //                                    <td><a href='CommunityMember-profile.aspx?removeAd={5}' class='btn btn-danger'>remove</a></td>
+            //                                </tr>", General.getDateString(item.DatePosted), item.Arrangement, item.Gender, item.PaymentType, item.RentAmount, item.Id);
+            //    }
+            //    lblNumAdds.Text = ads.Count.ToString();
+            //    //Set view to be current ads
+            //    setView.HRef = "#viewAdd";
+            //}
+            //else
+            //{
+            //    //Fill some fields
+            //    txtPhone.Text = student.Number;
 
-                setView.HRef = "#share";
-            }
+            //    setView.HRef = "#share";
+            //}
 
             //Check if the student has already some books sold
-            List<Book> books = new StudentConnection().getAllStudentBoks(student.Id);
-            lblPublished.Text = "";
-            if(books.Count > 0)
-            {
-                if (books.Count >= 8)
-                    addNew.Visible = false;
+            //List<Book> books = new StudentConnection().getAllStudentBoks(student.Id);
+            //lblPublished.Text = "";
+            //if (books.Count > 0)
+            //{
+            //    if (books.Count >= 8)
+            //        addNew.Visible = false;
 
-                foreach (Book book in books)
-                {
+            //    foreach (Book book in books)
+            //    {
 
-                    string desc = "";
+            //        string desc = "";
 
-                    if (book.Description.Length > 65)
-                        desc = book.Description.Substring(0, 65);
-                    else
-                        desc = book.Description;
+            //        if (book.Description.Length > 65)
+            //            desc = book.Description.Substring(0, 65);
+            //        else
+            //            desc = book.Description;
 
-                    lblPublished.Text += string.Format(@"<div class='col-sm-4' style='margin:30px'>
-                                        <div class='col-sm-6'>
-                                            <img src='../../../Images/Book/{0}' class='img-thumbnail' style='height:150px;width:100%' id='image1'/>
-                                        </div>
-                                        <div class='col-sm-6'>
-                                            <label><strong>Title: {1}</strong></label><br/>
-                                            <label><strong>Price:R{2}.00</strong></label><br/>
-                                            <label><strong><a href='students-profile.aspx?remove={3}' class='btn btn-danger'>Delete</a></strong> <a href='students-profile.aspx?edit={3}' class='btn btn-finish btn-fill btn-warning btn-wd'>Edit</a></strong></label>
-                                        </div>
-                                    </div>
-                                ", book.Image, book.Name,book.Price,book.Id);
-                }
+            //        lblPublished.Text += string.Format(@"<div class='col-sm-4' style='margin:30px'>
+            //                            <div class='col-sm-6'>
+            //                                <img src='../../../Images/Book/{0}' class='img-thumbnail' style='height:150px;width:100%' id='image1'/>
+            //                            </div>
+            //                            <div class='col-sm-6'>
+            //                                <label><strong>Title: {1}</strong></label><br/>
+            //                                <label><strong>Price:R{2}.00</strong></label><br/>
+            //                                <label><strong><a href='students-profile.aspx?remove={3}' class='btn btn-danger'>Delete</a></strong> <a href='students-profile.aspx?edit={3}' class='btn btn-finish btn-fill btn-warning btn-wd'>Edit</a></strong></label>
+            //                            </div>
+            //                        </div>
+            //                    ", book.Image, book.Name, book.Price, book.Id);
+            //    }
 
-                lblsellbooks.Text = "<a href='#sellbooks'  data-toggle='modal'>My Store</a>";
-            }
-            else
-            {
-                //Check if the student is allowed to post
-                if(!connection.isAllowedToPost(student.Id))
-                    lblsellbooks.Text = "<a href='#cannotsellbooks'data-toggle='modal'> My Store</a>";
-                else
-                    lblsellbooks.Text = "<a href='students-sell-textbooks.aspx'> My Store</a>";
-            }
+            //    lblsellbooks.Text = "<a href='#sellbooks'  data-toggle='modal'>My Store</a>";
+            //}
+            //else
+            //{
+            //    //Check if the student is allowed to post
+            //    if (!connection.isAllowedToPost(student.Id))
+            //        lblsellbooks.Text = "<a href='#cannotsellbooks'data-toggle='modal'> My Store</a>";
+            //    else
+            //        lblsellbooks.Text = "<a href='students-sell-textbooks.aspx'> My Store</a>";
+            //}
 
             lblSuccess.Text = "";
 

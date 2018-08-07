@@ -37,6 +37,7 @@ namespace Qaelo.Web.Users.Shop
         protected void btnFinish_Click(object sender, EventArgs e)
         {
             ShopOwner owner = (ShopOwner)Session["SHOPOWNER"];
+            int specialId = Convert.ToInt32(Request.QueryString["editId"].ToString());
 
             if (txtDescription.Text == string.Empty || txtName.Text == string.Empty || txtOpenHours.Text == string.Empty
                 || txtPrice.Text == string.Empty || txtShoNo.Text == string.Empty || txtShopName.Text == string.Empty
@@ -61,12 +62,17 @@ namespace Qaelo.Web.Users.Shop
                 catch (Exception ex)
                 {
                     divError.Visible = true;
+                    filename1 = file;
                     return;
                 }
             }
+            else
+            {
+                filename1 = new ShopConnection().getSpecialsById(specialId).Image;
+            }
 
 
-            Qaelo.Models.ShopOwnerModel.Shop special = new Qaelo.Models.ShopOwnerModel.Shop(Convert.ToInt32(Request.QueryString["editId"].ToString()),owner.Id, txtPrice.Text, txtDescription.Text, filename1, txtName.Text, txtOpenHours.Text, Convert.ToInt32(txtShoNo.Text)
+            Qaelo.Models.ShopOwnerModel.Shop special = new Qaelo.Models.ShopOwnerModel.Shop(specialId, owner.Id, txtPrice.Text, txtDescription.Text, filename1, txtName.Text, txtOpenHours.Text, txtShoNo.Text
                 , txtText.Text);
 
             if (new ShopConnection().updateSpecial(special,owner.Id))

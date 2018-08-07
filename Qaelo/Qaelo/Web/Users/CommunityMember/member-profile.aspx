@@ -349,7 +349,7 @@
                             <div class="modal-content">
                                 <div class="modal-header" style="background-color:palevioletred;">
                                     <!--<h4>Notice </h4>-->
-                                        <h4 style="color:white"  class="text-center ">Specials in your campus</h4>
+                                        <h4 style="color:white"  class="text-center ">Specials in your location</h4>
                                 </div>
                                 <div class='modal-body'>
                                 <div class="container-fluid">
@@ -396,7 +396,7 @@
                                             <h2>You cannot sell texbooks if your profile is not complete</h2>
                                             <b>Possible errors</b>
                                              <p>- Invalid Cell Number <br />
-                                                - Invalid University/Campus<br />
+                                                - Invalid location<br />
                                                 - Invalid Fist Name or last Name
                                              </p>
                                         </div>
@@ -421,7 +421,7 @@
                                         <h2>You cannot register as freelancer if your profile is not complete</h2>
                                         <b>Possible errors</b><br />
                                          - Invalid Cell Number <br />
-                                            - Invalid University/Campus<br />
+                                            - Invalid location<br />
                                             - Invalid Fist Name or last Name<br />
                                     </div>
                                 </div>

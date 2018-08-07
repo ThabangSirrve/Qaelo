@@ -16,14 +16,14 @@ namespace Qaelo.Models.ShopOwnerModel
         public string Image { get; set; }
         public string Name { get; set; }
         public string TradingHours { get; set; }
-        public int ShopNo { get; set; }
+        public string ShopNo { get; set; }
         public string University { get; set; }
         public DateTime SpecialStartDate { get; set; }
         public DateTime SpecialEndDate { get; set; }
         public string OrderID { get; set; }
         public string Status { get; set; }
 
-        public ShopAds(int Id, int ShopOwnerId, string Campus, string Description, string Image, string Name, string TradingHours, int ShopNo, string University, DateTime SpecialStartDate, DateTime SpecialEndDate, string OrderID, string Status)
+        public ShopAds(int Id, int ShopOwnerId, string Campus, string Description, string Image, string Name, string TradingHours, string ShopNo, string University, DateTime SpecialStartDate, DateTime SpecialEndDate, string OrderID, string Status)
         {
             this.Id = Id;
             this.ShopOwnerId = ShopOwnerId;
@@ -40,7 +40,7 @@ namespace Qaelo.Models.ShopOwnerModel
             this.Status = Status;
         }
 
-        public ShopAds( int ShopOwnerId, string Campus, string Description, string Image, string Name, string TradingHours, int ShopNo, string University, DateTime SpecialStartDate, DateTime SpecialEndDate, string OrderID, string Status)
+        public ShopAds( int ShopOwnerId, string Campus, string Description, string Image, string Name, string TradingHours, string ShopNo, string University, DateTime SpecialStartDate, DateTime SpecialEndDate, string OrderID, string Status)
         {
             this.ShopOwnerId = ShopOwnerId;
             this.Campus = Campus;

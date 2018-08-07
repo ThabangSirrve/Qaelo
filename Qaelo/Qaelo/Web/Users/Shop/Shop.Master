@@ -4,9 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Qaelo,Freelance, sell used textbooks, list student accommodation, list events, list student societies,list shops">
+    <meta name="keywords" content="Qaelo,Freelance, sell used textbooks, list student accommodation, list events, list student societies,list shops"/>
    
      <script type="application/x-javascript">
         addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
@@ -46,10 +46,10 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
+<body style="background:#efefe9;">
     <form id="form2" runat="server">
         <!-- banner -->
-    <div class="shops">
+    <div class="accommodation">
         <div class="container">
             <nav class="navbar navbar-default">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -70,10 +70,11 @@
                     <nav class="link-effect-2" id="link-effect-2">            
                         <ul class="nav navbar-nav navbar-right">
                         <li ><a href="Home.aspx">Clients</a></li>
-                             <li ><a href="ListShop.aspx">List a shop</a></li>
-                             <li ><a href="createAd.aspx">Create special</a></li>
-                             <li ><a href="ManageListings.aspx">Manage Listings</a></li>
-                             <li ><a href="EditProfile.aspx">Edit Profile</a></li>
+                             <li ><a href="list-facility.aspx">List a facility</a></li>
+                             <li ><a href="discount.aspx">Create discount</a></li>
+                             <li ><a href="manage-facilities.aspx">Manage Listings</a></li>
+                             <li ><a href="edit-profile.aspx">Edit Profile</a></li>
+                             <li ><a href="chat.aspx">Inbox</a></li>
                         <li><a href="../../Account/tempLogin.aspx?logout=true">Logout</a></li>    			
                     </ul>
                     </nav>

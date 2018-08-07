@@ -63,7 +63,7 @@ namespace Qaelo.Web.Users.Shop
                     </div>
                   </div>
                 </div>
-            </div>", shop.Image,shop.Description,shop.Name,shop.University,shop.ShopNo,shop.TradingHours,owner.Number,shop.Id);
+            </div>", shop.Image,shop.Description,shop.Name,shop.University,shop.Address,shop.TradingHours,owner.Number,shop.Id);
             }
 
             lblShops.Text = html;

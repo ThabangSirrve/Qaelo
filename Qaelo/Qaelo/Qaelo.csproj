@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,15 +44,57 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\..\..\Sirrve\Projects\Utility Folder\MySql.Data\MySql.Data.DLL</HintPath>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.11\lib\net452\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.10.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.10.7\lib\net452\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.0\lib\netstandard1.1\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -61,6 +104,27 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -68,6 +132,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -76,6 +143,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\CustomCss\animate.min.css" />
     <Content Include="Content\CustomCss\bootstrap.min.css" />
+    <Content Include="Content\CustomCss\chat.css" />
     <Content Include="Content\CustomCss\checkboxes.css" />
     <Content Include="Content\CustomCss\demo.css" />
     <Content Include="Content\CustomCss\imagehover\imagehover.css" />
@@ -119,6 +187,7 @@
     <Content Include="Content\CustomCss\Profile\assets\js\wizard.js" />
     <Content Include="Content\CustomCss\w3.css" />
     <Content Include="Content\fontawesome-stars.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="default.aspx" />
     <Content Include="Email\Image_1.png" />
     <Content Include="Email\Image_2.png" />
@@ -128,6 +197,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="getDirections.png" />
+    <Content Include="Global.asax" />
     <Content Include="google674cf04a39ec4fe6.html" />
     <Content Include="Images\Advertisers\IMG-20171031-WA0008.jpg" />
     <Content Include="Images\Book\default.jpg" />
@@ -144,6 +214,8 @@
     <Content Include="Images\Convinience\ups.png" />
     <Content Include="Images\Events\default.jpg" />
     <Content Include="Images\Freelancer\default.jpg" />
+    <Content Include="Images\Inbox\defualt image.png" />
+    <Content Include="Images\Profile\defaultProfilePic.jpg" />
     <Content Include="Images\Shops\defaultProfilePic.jpg" />
     <Content Include="Images\Scociety\defaultProfilePic.jpg" />
     <Content Include="Images\Shops\Specials\defaultProfilePic.jpg" />
@@ -179,8 +251,18 @@
     <Content Include="Content\CustomCss\notify\.gitignore" />
     <Content Include="Content\CustomCss\notify\LICENSE" />
     <Content Include="Content\CustomCss\notify\README.md" />
+    <Content Include="Web\Users\Student\test.aspx" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery.barrating.min.js" />
     <Content Include="Scripts\jquery.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\Search\tether.min.js" />
     <Content Include="Scripts\Search\typeahead.bundle.js" />
     <Content Include="Scripts\Search\universities.js" />
@@ -229,6 +311,14 @@
     <Content Include="Web\Users\EventPoster\ManageEvents.aspx" />
     <Content Include="Web\Users\EventPoster\PostEvent.aspx" />
     <Content Include="Web\Users\EventPoster\Sellticket.aspx" />
+    <Content Include="Web\Users\Facility\chat.aspx" />
+    <Content Include="Web\Users\Facility\discount.aspx" />
+    <Content Include="Web\Users\Facility\edit-discount.aspx" />
+    <Content Include="Web\Users\Facility\edit-facility.aspx" />
+    <Content Include="Web\Users\Facility\edit-profile.aspx" />
+    <Content Include="Web\Users\Facility\home.aspx" />
+    <Content Include="Web\Users\Facility\list-facility.aspx" />
+    <Content Include="Web\Users\Facility\manage-facilities.aspx" />
     <Content Include="Web\Users\Shop\createAd.aspx" />
     <Content Include="Web\Users\Shop\EditProfile.aspx" />
     <Content Include="Web\Users\Shop\EditShop.aspx" />
@@ -237,6 +327,9 @@
     <Content Include="Web\Users\Society\EditEvent.aspx" />
     <Content Include="Web\Users\Society\EditProfile.aspx" />
     <Content Include="Web\Users\Society\ListEvent.aspx" />
+    <Content Include="Web\Users\Student\change-password.aspx" />
+    <Content Include="Web\Users\Student\chat.aspx" />
+    <Content Include="Web\Users\Student\facility.aspx" />
     <Content Include="Web\Users\Student\student-accommodation.aspx" />
     <Content Include="Web\Users\Student\student-edit-profile.aspx" />
     <Content Include="Web\Users\Student\students-add-work.aspx" />
@@ -256,6 +349,7 @@
     <Content Include="Content\CustomCss\Profile\assets\js\.DS_Store" />
     <None Include="Properties\PublishProfiles\FTP.pubxml" />
     <None Include="Properties\PublishProfiles\qaelo.com - Web Deploy.pubxml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -311,12 +405,16 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Data\AccommodationData\AccommodationConnection.cs" />
     <Compile Include="Data\AccommodationData\ManagerConnection.cs" />
     <Compile Include="Data\Accounts\AccountConnection.cs" />
     <Compile Include="Data\CompanyData\CompanyConnection.cs" />
     <Compile Include="Data\Connection.cs" />
     <Compile Include="Data\EventsData\EventConnection.cs" />
+    <Compile Include="Data\MessageConnection.cs" />
     <Compile Include="Data\ShopData\ShopConnection.cs" />
     <Compile Include="Data\SocietyData\SocietyConnection.cs" />
     <Compile Include="Data\StudentData\StudentConnection.cs" />
@@ -326,6 +424,9 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccommodationModel\Accommodation.cs" />
     <Compile Include="Models\AccommodationModel\Manager.cs" />
@@ -339,9 +440,14 @@
     <Compile Include="Models\EventPosterModel\MyEvent.cs" />
     <Compile Include="Models\EventPosterModel\TicketModel.cs" />
     <Compile Include="Models\Freelancer\PreviousWork.cs" />
+    <Compile Include="Models\Inbox\Message.cs" />
+    <Compile Include="Models\ShopOwnerModel\Discount.cs" />
+    <Compile Include="Models\ShopOwnerModel\DiscountViewModel.cs" />
     <Compile Include="Models\ShopOwnerModel\Shop.cs" />
     <Compile Include="Models\ShopOwnerModel\ShopAds.cs" />
     <Compile Include="Models\ShopOwnerModel\ShopOwner.cs" />
+    <Compile Include="Models\ShopOwnerModel\ShopOwnerViewModel.cs" />
+    <Compile Include="Models\ShopOwnerModel\ShopViewModel.cs" />
     <Compile Include="Models\SocietyModel\Society.cs" />
     <Compile Include="Models\StudentModel\Book.cs" />
     <Compile Include="Models\StudentModel\Freelancer.cs" />
@@ -589,6 +695,62 @@
     <Compile Include="Web\Users\EventPoster\Sellticket.aspx.designer.cs">
       <DependentUpon>Sellticket.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Web\Users\Facility\chat.aspx.cs">
+      <DependentUpon>chat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Facility\chat.aspx.designer.cs">
+      <DependentUpon>chat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Facility\discount.aspx.cs">
+      <DependentUpon>discount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Facility\discount.aspx.designer.cs">
+      <DependentUpon>discount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Facility\edit-discount.aspx.cs">
+      <DependentUpon>edit-discount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Facility\edit-discount.aspx.designer.cs">
+      <DependentUpon>edit-discount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Facility\edit-facility.aspx.cs">
+      <DependentUpon>edit-facility.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Facility\edit-facility.aspx.designer.cs">
+      <DependentUpon>edit-facility.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Facility\edit-profile.aspx.cs">
+      <DependentUpon>edit-profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Facility\edit-profile.aspx.designer.cs">
+      <DependentUpon>edit-profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Facility\home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Facility\home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Facility\list-facility.aspx.cs">
+      <DependentUpon>list-facility.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Facility\list-facility.aspx.designer.cs">
+      <DependentUpon>list-facility.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Facility\manage-facilities.aspx.cs">
+      <DependentUpon>manage-facilities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Facility\manage-facilities.aspx.designer.cs">
+      <DependentUpon>manage-facilities.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Web\Users\Shop\createAd.aspx.cs">
       <DependentUpon>createAd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -700,6 +862,27 @@
     </Compile>
     <Compile Include="Web\Users\Society\Society.Master.designer.cs">
       <DependentUpon>Society.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Student\change-password.aspx.cs">
+      <DependentUpon>change-password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Student\change-password.aspx.designer.cs">
+      <DependentUpon>change-password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Student\chat.aspx.cs">
+      <DependentUpon>chat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Student\chat.aspx.designer.cs">
+      <DependentUpon>chat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Student\facility.aspx.cs">
+      <DependentUpon>facility.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Student\facility.aspx.designer.cs">
+      <DependentUpon>facility.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web\Users\Student\student-accommodation.aspx.cs">
       <DependentUpon>student-accommodation.aspx</DependentUpon>
@@ -820,8 +1003,16 @@
     <Compile Include="Web\Users\Student\template.Master.designer.cs">
       <DependentUpon>template.Master</DependentUpon>
     </Compile>
+    <Compile Include="Web\Users\Student\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Student\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Images\Accommodation\" />
     <Folder Include="Web\Home\" />
   </ItemGroup>

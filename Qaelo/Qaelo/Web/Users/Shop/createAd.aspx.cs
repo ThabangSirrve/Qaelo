@@ -54,7 +54,7 @@ namespace Qaelo.Web.Users.Shop
             }
 
 
-            Qaelo.Models.ShopOwnerModel.Shop special = new Qaelo.Models.ShopOwnerModel.Shop(owner.Id, txtPrice.Text,txtDescription.Text, filename1,txtName.Text,txtOpenHours.Text,Convert.ToInt32(txtShoNo.Text)
+            Qaelo.Models.ShopOwnerModel.Shop special = new Qaelo.Models.ShopOwnerModel.Shop(owner.Id, txtPrice.Text,txtDescription.Text, filename1,txtName.Text,txtOpenHours.Text,txtShoNo.Text
                 ,txtText.Text);
 
             if(new ShopConnection().postSpecial(special))

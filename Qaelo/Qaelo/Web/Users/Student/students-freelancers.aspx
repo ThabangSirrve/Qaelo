@@ -17,6 +17,9 @@
     max-width: 100%; /* Max Width of the popover (depending on the container!) */
 }
     </style>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaYiQPQ1vAMeFLPA4ilHRPfcFG6zfE7uY&libraries=places"></script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div style="margin-top:60px"></div>

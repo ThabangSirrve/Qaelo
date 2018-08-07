@@ -119,14 +119,14 @@ namespace Qaelo.Web.Users.CommunityMember
                         <h6 style='margin-bottom:10px'><b>{2}</b></h6>
                         {7}<br/>
                         <h6 style='margin-bottom:10px'>Location:<small style='font-size:12px'>{2}</small></h6>
-                        <h6 style='margin-bottom:10px'>Link :<a style='font-size:12px' href='http://localhost:53020/profile/'>{6}</a></h6>
+                        <h6 style='margin-bottom:10px'>Link :<a style='font-size:12px' href='{6}'>{6}</a></h6>
                       <a href='students-profile.aspx?disable={8}' class='btn btn-danger pull-right form-control'>Go Private!</a>
                         <br /><br/>
                     </div>
                   </div>
                 </div>
                     
-            ", proficePic, student.Description, student.FirstName + " " + student.LastName, student.Institution, student.QualificationEnrolled, student.YearOfStudy, "http://localhost:53020/profile/"+ link.ToLower(), freelancer, student.Id);
+            ", proficePic, student.Description, student.FirstName + " " + student.LastName, student.Institution, student.QualificationEnrolled, student.YearOfStudy, "http://localhost:53020/profile?p="+ link.ToLower(), freelancer, student.Id);
 
             }
             else

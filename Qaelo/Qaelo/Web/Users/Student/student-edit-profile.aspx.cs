@@ -82,32 +82,32 @@ namespace Qaelo.Web.Users.Student
         }
 
 
-        protected void btnUpdate_Click(object sender, EventArgs e)
-        {
-            if (txtConfirmPassword.Text == txtNewPassword.Text)
-            {
-                AccountConnection account = new AccountConnection();
-                Qaelo.Models.StudentModel.Student s = (Qaelo.Models.StudentModel.Student)Session["STUDENT"];
+        //protected void btnUpdate_Click(object sender, EventArgs e)
+        //{
+        //    if (txtConfirmPassword.Text == txtNewPassword.Text)
+        //    {
+        //        AccountConnection account = new AccountConnection();
+        //        Qaelo.Models.StudentModel.Student s = (Qaelo.Models.StudentModel.Student)Session["STUDENT"];
 
-                //Test password 
+        //        //Test password 
 
-                if (account.correctStudent(s.Email, Secrecy.HashPassword(txtCurrentPassword.Text)) && account.updateStudentPassword(s.Id, Secrecy.HashPassword(txtNewPassword.Text), Secrecy.HashPassword(txtCurrentPassword.Text)))
-                {
-                    lblSuccess.Text = "Successfuly Updated Password";
-                    lblErrorMessage.Text = "";
-                }
-                else
-                {
-                    lblErrorMessage.Text = "Incorrect Current Password";
-                    lblSuccess.Text = "";
-                }
-            }
-            else
-            {
-                lblErrorMessage.Text = "New password and confirm Password Do not match ";
-                lblSuccess.Text = "";
-            }
-        }
+        //        if (account.correctStudent(s.Email, Secrecy.HashPassword(txtCurrentPassword.Text)) && account.updateStudentPassword(s.Id, Secrecy.HashPassword(txtNewPassword.Text), Secrecy.HashPassword(txtCurrentPassword.Text)))
+        //        {
+        //            lblSuccess.Text = "Successfuly Updated Password";
+        //            lblErrorMessage.Text = "";
+        //        }
+        //        else
+        //        {
+        //            lblErrorMessage.Text = "Incorrect Current Password";
+        //            lblSuccess.Text = "";
+        //        }
+        //    }
+        //    else
+        //    {
+        //        lblErrorMessage.Text = "New password and confirm Password Do not match ";
+        //        lblSuccess.Text = "";
+        //    }
+        //}
 
         protected void btnFinish_Click(object sender, EventArgs e)
         {

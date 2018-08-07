@@ -53,7 +53,7 @@ namespace Qaelo.Web.Users.Shop
                 string images = filename1;
 
                 //Upload shop
-                if (new ShopConnection().postShop(new Models.ShopOwnerModel.Shop(owner.Id, "", txtDescription.Text, images, txtShopName.Text, txtOpenHours.Text, Convert.ToInt32(txtShoNo.Text), txtText.Text)))
+                if (new ShopConnection().postShop(new Models.ShopOwnerModel.Shop(owner.Id, "", txtDescription.Text, images, txtShopName.Text, txtOpenHours.Text, txtShoNo.Text, txtText.Text)))
                 {
                     lblSuccess.Text = "You have successfully added a Special";
                     Response.Redirect("ManageListings.aspx");

@@ -28,10 +28,10 @@
       <h6 class="message">Please complete the form below</h6><br />
       <asp:DropDownList id="ddlUser" runat="server" AutoPostBack="true" CssClass="dropdownlist">
           <asp:ListItem Value="NONE" disabled="" Selected="">Please Select Profile</asp:ListItem>
-          <asp:ListItem Value="Student">Freelancer</asp:ListItem>
-          <asp:ListItem Value="Property">Property Manager</asp:ListItem>
-          <asp:ListItem Value="Shop">Shop Manager</asp:ListItem>
-          <asp:ListItem Value="Event">Events Manager</asp:ListItem>
+          <asp:ListItem Value="Student">Community Member Profile</asp:ListItem>
+          <asp:ListItem Value="Shop">FacilityProfile</asp:ListItem>
+<%--          <asp:ListItem Value="Property">Property Manager</asp:ListItem>
+          <asp:ListItem Value="Event">Events Manager</asp:ListItem>--%>
           <%--<asp:ListItem Value="Company">Company HR</asp:ListItem>--%>
           <%--<asp:ListItem Value="Society">Group Manager</asp:ListItem>--%>
       </asp:DropDownList>

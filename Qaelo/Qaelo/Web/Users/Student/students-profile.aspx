@@ -56,7 +56,7 @@
     <!--/Notifier-->
     
         <div class="container">
-            <h4 class="col-md-3" ><b>My Qaelo Freelance Platform</b></h4>
+            <h4 class="col-md-3" ><b>My Qaelo Community Platform</b></h4>
         </div>
 
         <div class="container" style="margin-top:50px">
@@ -85,14 +85,14 @@
         </div>
 
         <div class="col-md-6">
-            <a href="#share" runat="server" id="setView" data-toggle='modal'  class="btn btn-block btn-default" >Advertise to Landlords</a>
+            <a href="change-password.aspx" runat="server"   class="btn btn-block btn-default" >Change Password</a>
             <br />
         </div>
 
-        <div class="col-md-6">
+<%--        <div class="col-md-6">
             <asp:Label ID="lblsellbooks" class="btn btn-block btn-default" runat="server" Text=""></asp:Label>
             <br />
-        </div>
+        </div>--%>
 
         <div class="col-md-6">
             <a href="#myModal1" data-toggle='modal'  class="btn btn-block btn-default" >View Specials</a>
@@ -349,7 +349,7 @@
                             <div class="modal-content">
                                 <div class="modal-header" style="background-color:palevioletred;">
                                     <!--<h4>Notice </h4>-->
-                                        <h4 style="color:white"  class="text-center ">Specials in your campus</h4>
+                                        <h4 style="color:white"  class="text-center ">Specials in your community</h4>
                                 </div>
                                 <div class='modal-body'>
                                 <div class="container-fluid">
@@ -367,7 +367,7 @@
         <asp:Label ID="lblSpecials" runat="server" Text=""></asp:Label>
 
         <!-- Selling textbooks-->
-        <div class='modal fade' id='sellbooks' tabindex='-1' role='dialog' aria-labelledby='myModalLabel{1}' aria-hidden='true'>
+<%--        <div class='modal fade' id='sellbooks' tabindex='-1' role='dialog' aria-labelledby='myModalLabel{1}' aria-hidden='true'>
                 <div class='modal-dialog modal-lg2 '>
                     <div class='modal-content'>
                             <div class="modal-header" style="background-color:palevioletred;"><h4 class="text-center" style="color:white;">Maximum of 8 books are allowed</h4></div>
@@ -384,9 +384,8 @@
                             </div>
                         </div>
 
-        </div>
-
-        <div class='modal fade' id='cannotsellbooks' tabindex='-1' role='dialog' aria-labelledby='myModalLabel{1}' aria-hidden='true'>
+        </div>--%>
+        <%--<div class='modal fade' id='cannotsellbooks' tabindex='-1' role='dialog' aria-labelledby='myModalLabel{1}' aria-hidden='true'>
                 <div class='modal-dialog'>
                     <div class='modal-content'>
                             <div class="modal-header"><h3 class="text-center">Not Allowed to sell textbooks</h3></div>
@@ -409,7 +408,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>--%>
 
         <div class='modal fade' id='cannotBecomeFreelancer' tabindex='-1' role='dialog' aria-labelledby='myModalLabel{1}' aria-hidden='true'>
             <div class='modal-dialog'>

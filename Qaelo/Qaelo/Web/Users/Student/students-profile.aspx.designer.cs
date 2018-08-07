@@ -40,24 +40,6 @@ namespace Qaelo.Web.Users.Student {
         protected global::System.Web.UI.WebControls.Literal lblProfileView;
         
         /// <summary>
-        /// setView control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor setView;
-        
-        /// <summary>
-        /// lblsellbooks control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblsellbooks;
-        
-        /// <summary>
         /// lblNumAdds control.
         /// </summary>
         /// <remarks>
@@ -146,33 +128,6 @@ namespace Qaelo.Web.Users.Student {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblSpecials;
-        
-        /// <summary>
-        /// lblPublished control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lblPublished;
-        
-        /// <summary>
-        /// addNew control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor addNew;
-        
-        /// <summary>
-        /// a1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor a1;
         
         /// <summary>
         /// a2 control.

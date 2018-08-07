@@ -41,6 +41,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- start-smooth-scrolling -->
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <!--Cookie notification-->
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+    window.addEventListener("load", function () {
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#252e39"
+                },
+                "button": {
+                    "background": "#14a7d0"
+                }
+            },
+            "theme": "classic",
+            "position": "bottom-right"
+        })
+    });
+</script>
+
 </head>
 
 <body>
@@ -87,7 +108,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <nav class="link-effect-2" id="link-effect-2">
                         <ul class="nav navbar-nav">
                             <li><a href="Web/Users/Student/students-freelancers.aspx"><span data-hover="FIND A FREELANCER">FIND A FREELANCER</span></a></li>
-                            <li><a href="Web/Users/Student/students-shops.aspx"><span data-hover="Find a facility">Find a facility</span></a></li>
+                            <li><a href="Web/Users/student/facility.aspx"><span data-hover="Find a facility">SEARCH YOUR COMMUNITY</span></a></li>
 <%--                        <li><a href="Web/Users/Student/student-accommodation.aspx" ><span data-hover="ROOMS">ROOMS</span></a></li>
                             <li><a href="Web/Users/Student/students-events.aspx" ><span data-hover="Events & AUditions">Events & AUditions</span></a></li>
                             <li><a href="Web/Users/Student/students-buy-textbooks.aspx"><span data-hover="BUY BOOKS">BUY BOOKS</span></a></li>
@@ -100,10 +121,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </nav>
             <div class="banner-info">
                 <!--style="color:#FFB445"-->
-                <h2 >YOUR LOCAL COMMUNITY DIRECTORY!</h2>
+                <h2 >CONVENIENCE TO YOU…</h2>
                 <div class="form-group">
-                    <br />
-             <div class="more">
+                    <p>FREELANCE. LIST YOUR BUSINESS FOR FREE</p>
+                    <div class="more">
             <a href="Web/Account/tempLogin.aspx" class="hvr-shutter-in-vertical" style="margin-bottom:10px">Sign In</a>
             <a href="Web/Account/Registration.aspx" class="hvr-shutter-in-vertical" style="margin-bottom:10px">Create Profile</a>
             <%--<a href="#" onclick="loginByFacebook();" class="hvr-shutter-in-vertical" style="margin-bottom:10px"><i class="fa fa-facebook" aria-hidden="true"></i> Login With Facebook </a>--%>
@@ -121,7 +142,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <section>
                                     <div class="modal-body">
                                         <p>
-                                            Functionality comming soon.
+                                            CONVENIENCE TO YOU…
                                         </p>
                                     </div>
                                 </section>

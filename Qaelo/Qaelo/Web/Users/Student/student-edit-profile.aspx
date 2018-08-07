@@ -231,46 +231,10 @@
                                 </div>
                           <p class="text-center">
                            <a href="#profile" data-toggle="tab"  class="btn btn-warning btn-outline-rounded orange"> Previous <span style="margin-left:10px;" class="glyphicon glyphicon-backward"></span></a>
-                           <a href="#settings" data-toggle="tab"  class="btn btn-success btn-outline-rounded green"> Next <span style="margin-left:10px;" class="glyphicon glyphicon-forward"></span></a>
+                           <a href="#doner" data-toggle="tab"  class="btn btn-success btn-outline-rounded green"> Next <span style="margin-left:10px;" class="glyphicon glyphicon-forward"></span></a>
                           </p>
                       </div>
 
-                      <div class="tab-pane fade" id="settings">
-                          <h3 class="head text-center">Update your Password</h3>
-                          <!-- Content -->
-                                <div class="row">
-                                    <div class="col-sm-7 col-sm-offset-2">
-                                         <div class="form-group">
-                                            <%--<label>Current Password</label>--%>
-                                             <asp:TextBox ID="txtCurrentPassword" type="password" class="form-control" placeholder="Cuurent password" runat="server"></asp:TextBox>
-                                          </div>
-                                    </div>
-                                    <div class="col-sm-7 col-sm-offset-2">
-                                         <div class="form-group">
-                                            <%--<label>New Password</label>--%>
-                                             <asp:TextBox ID="txtNewPassword" type="password" class="form-control" placeholder="New password" runat="server"></asp:TextBox>
-                                          </div>
-                                    </div>
-                                     <div class="col-sm-7 col-sm-offset-2">
-                                         <div class="form-group">
-                                            <%--<label>Confirm Password</label>--%>
-                                             <asp:TextBox ID="txtConfirmPassword" type="password" class="form-control" placeholder="Confirm Password" runat="server"></asp:TextBox>
-                                          </div>
-                                    </div>
-                                    
-                                                                         
-                                    <div class="col-sm-7 col-sm-offset-2">
-                                         <div class="form-group">
-                                             <asp:Button ID="btnUpdate" class="btn btn-info pull-right" runat="server" Text="update" OnClick="btnUpdate_Click" />
-                                          </div>
-                                    </div>
-                                </div>
-                          <p class="text-center">
-                           <a href="#messages" data-toggle="tab"  class="btn btn-warning btn-outline-rounded orange"> Previous <span style="margin-left:10px;" class="glyphicon glyphicon-backward"></span></a>
-                           <a href="#doner" data-toggle="tab"  class="btn btn-success btn-outline-rounded green"> Next <span style="margin-left:10px;" class="glyphicon glyphicon-forward"></span></a>
-                          </p>
-                          
-                      </div>
 
                       <div class="tab-pane fade" id="doner">
                           <div class="text-center">

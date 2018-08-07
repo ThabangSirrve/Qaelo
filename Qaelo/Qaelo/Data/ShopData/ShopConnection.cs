@@ -26,7 +26,7 @@ namespace Qaelo.Data.ShopData
                 command.Parameters.AddWithValue("@Image", shop.Image);
                 command.Parameters.AddWithValue("@Name", shop.Name);
                 command.Parameters.AddWithValue("@TradingHours", shop.TradingHours);
-                command.Parameters.AddWithValue("@ShopNo", shop.ShopNo);
+                command.Parameters.AddWithValue("@ShopNo", shop.Address);
                 command.Parameters.AddWithValue("@University", shop.University);
 
                 command.Connection.Open();
@@ -39,23 +39,23 @@ namespace Qaelo.Data.ShopData
                 success = true;
             }
 
-            query = @"INSERT INTO shopcategory(ShopOwnerId, CategoryName)Values(@ShopOwnerId, @CategoryName)";
+            //query = @"INSERT INTO shopcategory(ShopOwnerId, CategoryName)Values(@ShopOwnerId, @CategoryName)";
 
-            using (MySqlCommand command = new MySqlCommand(query, new MySqlConnection(getConnectionString())))
-            {
-                //General
-                command.Parameters.AddWithValue("@ShopOwnerId", shop.ShopOwnerId);
-                command.Parameters.AddWithValue("@CategoryName", "");
+            //using (MySqlCommand command = new MySqlCommand(query, new MySqlConnection(getConnectionString())))
+            //{
+            //    //General
+            //    command.Parameters.AddWithValue("@ShopOwnerId", shop.ShopOwnerId);
+            //    command.Parameters.AddWithValue("@CategoryName", "");
 
-                command.Connection.Open();
+            //    command.Connection.Open();
 
-                command.CommandType = System.Data.CommandType.Text;
-                command.ExecuteNonQuery();
+            //    command.CommandType = System.Data.CommandType.Text;
+            //    command.ExecuteNonQuery();
 
-                command.Connection.Close();
+            //    command.Connection.Close();
 
-                success = true;
-            }
+            //    success = true;
+            //}
 
             return success;
         } // List your shop
@@ -76,7 +76,7 @@ namespace Qaelo.Data.ShopData
                 command.Parameters.AddWithValue("@Name", shop.Name);
                 command.Parameters.AddWithValue("@TradingHours", shop.TradingHours);
                 command.Parameters.AddWithValue("@University", shop.University);
-                command.Parameters.AddWithValue("@ShopNo", shop.ShopNo);
+                command.Parameters.AddWithValue("@ShopNo", shop.Address);
                 command.Parameters.AddWithValue("@SpecialStartDate", DateTime.Now);
                 command.Parameters.AddWithValue("@SpecialEndDate", DateTime.Now);
                 command.Parameters.AddWithValue("@OrderID", 0);
@@ -111,7 +111,7 @@ namespace Qaelo.Data.ShopData
                 command.Parameters.AddWithValue("@Image", Shop.Image);
                 command.Parameters.AddWithValue("@Name", Shop.Name);
                 command.Parameters.AddWithValue("@TradingHours", Shop.TradingHours);
-                command.Parameters.AddWithValue("@ShopNo", Shop.ShopNo);
+                command.Parameters.AddWithValue("@ShopNo", Shop.Address);
                 command.Parameters.AddWithValue("@University", Shop.University);
 
                 command.Connection.Open();
@@ -143,7 +143,7 @@ namespace Qaelo.Data.ShopData
                 command.Parameters.AddWithValue("@Image", Shop.Image);
                 command.Parameters.AddWithValue("@Name", Shop.Name);
                 command.Parameters.AddWithValue("@TradingHours", Shop.TradingHours);
-                command.Parameters.AddWithValue("@ShopNo", Shop.ShopNo);
+                command.Parameters.AddWithValue("@ShopNo", Shop.Address);
                 command.Parameters.AddWithValue("@University", Shop.University);
 
                 command.Connection.Open();
@@ -201,7 +201,7 @@ namespace Qaelo.Data.ShopData
                     {
                         while (reader.Read())
                         {
-                            Shops.Add(new Shop(reader.GetInt32(0), reader.GetInt32(1),reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetInt32(7), reader.GetString(8)));
+                            Shops.Add(new Shop(reader.GetInt32(0), reader.GetInt32(1),reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8)));
                         }
                     }
                     reader.Close();
@@ -230,7 +230,7 @@ namespace Qaelo.Data.ShopData
                     {
                         while (reader.Read())
                         {
-                            Shops.Add(new ShopAds(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetInt32(7), reader.GetString(8),reader.GetDateTime(9), reader.GetDateTime(9),"","ACTIVE"));
+                            Shops.Add(new ShopAds(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8),reader.GetDateTime(9), reader.GetDateTime(9),"","ACTIVE"));
                         }
                     }
                     reader.Close();
@@ -260,7 +260,7 @@ namespace Qaelo.Data.ShopData
                     {
                         while (reader.Read())
                         {
-                            Shops.Add(new ShopAds(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetInt32(7), reader.GetString(8), reader.GetDateTime(9), reader.GetDateTime(9), "", "ACTIVE"));
+                            Shops.Add(new ShopAds(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8), reader.GetDateTime(9), reader.GetDateTime(9), "", "ACTIVE"));
                         }
                     }
                     reader.Close();
@@ -290,7 +290,7 @@ namespace Qaelo.Data.ShopData
                     {
                         if (reader.Read())
                         {
-                            Shops = new ShopAds(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetInt32(7), reader.GetString(8), reader.GetDateTime(9), reader.GetDateTime(9), "", "ACTIVE");
+                            Shops = new ShopAds(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8), reader.GetDateTime(9), reader.GetDateTime(9), "", "ACTIVE");
                         }
                     }
                     reader.Close();
@@ -320,7 +320,7 @@ namespace Qaelo.Data.ShopData
                     {
                         while (reader.Read())
                         {
-                            Shop = new Shop(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetInt32(7), reader.GetString(8));
+                            Shop = new Shop(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8));
                         }
                     }
                     reader.Close();
@@ -350,7 +350,7 @@ namespace Qaelo.Data.ShopData
                     {
                         while (reader.Read())
                         {
-                            Shops.Add(new Shop(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetInt32(7), reader.GetString(8)));
+                            Shops.Add(new Shop(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8)));
                         }
                     }
                     reader.Close();
@@ -361,6 +361,7 @@ namespace Qaelo.Data.ShopData
 
             return Shops;
         }
+        //getAllShopsBySearch
 
         public List<Shop> getAllShopsByUniversity(string univ)
         {
@@ -380,7 +381,38 @@ namespace Qaelo.Data.ShopData
                     {
                         while (reader.Read())
                         {
-                            Shops.Add(new Shop(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetInt32(7), reader.GetString(8)));
+                            Shops.Add(new Shop(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8)));
+                        }
+                    }
+                    reader.Close();
+                }
+                //Close Connection
+                command.Connection.Close();
+            }
+
+            return Shops;
+        }
+
+        public List<Shop> getAllShopsBySearch(string univ, string type)
+        {
+            List<Shop> Shops = new List<Shop>();
+
+            string query = "SELECT * FROM shopspecials WHERE University = @location AND Campus = @type";
+
+            using (MySqlCommand command = new MySqlCommand(query, new MySqlConnection(getConnectionString())))
+            {
+                command.Parameters.AddWithValue("@location", univ);
+                command.Parameters.AddWithValue("@type", type);
+                command.Connection.Open();
+                command.CommandType = System.Data.CommandType.Text;
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            Shops.Add(new Shop(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8)));
                         }
                     }
                     reader.Close();
@@ -410,7 +442,7 @@ namespace Qaelo.Data.ShopData
                     {
                         while (reader.Read())
                         {
-                            Shops.Add(new Shop(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetInt32(7), reader.GetString(8)));
+                            Shops.Add(new Shop(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8)));
                         }
                     }
                     reader.Close();

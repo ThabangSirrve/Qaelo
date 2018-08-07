@@ -48,7 +48,7 @@ namespace Qaelo.Web.Users.Shop
                                 <th>Email</th>
                                 <th>Number</th>
                               </tr>
-                            </thead><tbody>", shop.ShopNo);
+                            </thead><tbody>", shop.Address);
                 foreach (int userId in userIds)
                 {
                     Qaelo.Models.StudentModel.Student s = new Data.Accounts.AccountConnection().getStudent(userId);

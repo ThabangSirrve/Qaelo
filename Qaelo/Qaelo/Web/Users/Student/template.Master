@@ -106,7 +106,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
+<body style="background:#efefe9;">
     <form id="form" runat="server">
         <!-- banner -->
     <div class="banner2">
@@ -132,10 +132,11 @@
                         <ul class="nav navbar-nav">
                              <li ><a href="students-profile.aspx">My Profile</a></li>  			
                             <li><a href="students-freelancers.aspx">FIND A FREELANCER</a></li>
-                            <li><a href="students-shops.aspx">SHOPS</a></li>
-                            <li><a href="student-accommodation.aspx" >ROOMS</a></li>
+                            <li><a href="facility.aspx">Find A FACILITY</a></li>
+                            <li><a href="chat.aspx">Inbox</a></li>
+<%--                            <li><a href="student-accommodation.aspx" >ROOMS</a></li>
                             <li><a href="students-events.aspx">Events & AUditions</a></li>
-                            <li><a href="students-buy-textbooks.aspx">BUY BOOKS</a></li>
+                            <li><a href="students-buy-textbooks.aspx">BUY BOOKS</a></li>--%>
                             <%--<li><a href="students-societies.aspx">Groups</a></li>--%>  
 <%--                            <li><a href="#"><span data-hover="BLOG">BLOG</span></a></li>
                             <li><a href="#"><span data-hover="FAQ">FAQ</span></a></li>--%>

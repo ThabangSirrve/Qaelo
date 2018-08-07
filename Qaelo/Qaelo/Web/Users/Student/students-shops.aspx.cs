@@ -44,7 +44,7 @@ namespace Qaelo.Web.Users.Student
                         </div><br />
                       </div>
                     </div>
-                </div>", shop.Image, "", shop.Name, shop.University, shop.ShopNo, shop.TradingHours, connection.getShopOwner(shop.ShopOwnerId).Number, shop.Id);
+                </div>", shop.Image, "", shop.Name, shop.University, shop.Address, shop.TradingHours, connection.getShopOwner(shop.ShopOwnerId).Number, shop.Id);
 
                 //Display Pop up 
 
@@ -77,7 +77,7 @@ namespace Qaelo.Web.Users.Student
                                     </div>
                                 </div>
                             </div>
-                            </div>", shop.Id, shop.Name, shop.University, "", shop.Description.Replace(char.ConvertFromUtf32(13), "<br/>"), shop.ShopNo, shop.TradingHours);
+                            </div>", shop.Id, shop.Name, shop.University, "", shop.Description.Replace(char.ConvertFromUtf32(13), "<br/>"), shop.Address, shop.TradingHours);
 
             }
 

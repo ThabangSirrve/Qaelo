@@ -34,7 +34,7 @@ namespace Qaelo.Web.Users.Shop
             //        txtShopName.Text = shop.Name;
             //        txtOpenHours.Text = shop.TradingHours;
             //        txtShoNo.Text = shop.ShopNo.ToString();
-            //        txtText.Text =  shop.University;
+            //        txtText.Text = shop.University;
 
             //    }
             //    else
@@ -74,7 +74,7 @@ namespace Qaelo.Web.Users.Shop
             if (uploadStatus)
             {
                 //Upload shop
-                if (new ShopConnection().updateShop(new Models.ShopOwnerModel.Shop(shopId, owner.Id, "", txtDescription.Text, filename1, txtShopName.Text, txtOpenHours.Text, Convert.ToInt32(txtShoNo.Text), txtText.Text), owner.Id))
+                if (new ShopConnection().updateShop(new Models.ShopOwnerModel.Shop(shopId, owner.Id, "", txtDescription.Text, filename1, txtShopName.Text, txtOpenHours.Text, txtShoNo.Text, txtText.Text), owner.Id))
                 {
                     lblSuccess.Text = "You have successfully Edit " + txtShopName.Text + " a Special";
                     Response.Redirect("ManageListings.aspx");
