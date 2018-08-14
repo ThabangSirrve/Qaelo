@@ -22,7 +22,9 @@ namespace Qaelo.Web.Users.Student
             //Load manager
             Data.ShopData.ShopConnection connection = new Data.ShopData.ShopConnection();
             //Load Shops
-            List<Qaelo.Models.ShopOwnerModel.Shop> shops = connection.getAllShopsBySearch(txtText.Text,ddlYear.SelectedItem.Text);
+            string txtSearch = String.Format("{0}", Request.Form["txtPlaces"]);
+
+            List<Qaelo.Models.ShopOwnerModel.Shop> shops = connection.getAllShopsBySearch(txtSearch,ddlYear.SelectedItem.Text);
 
 
             string html = "";

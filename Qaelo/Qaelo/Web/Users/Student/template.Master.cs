@@ -12,6 +12,10 @@ namespace Qaelo.Web.Users.Student
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if (Session["STUDENT"] != null)
+                lblInbox.Visible = true;
+            else
+                lblInbox.Visible = false;
         }
     }
 }

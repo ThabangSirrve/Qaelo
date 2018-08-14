@@ -13,5 +13,10 @@ namespace Qaelo.Web.Users.Student
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            string name = txtPlaces.Text;
+        }
     }
 }

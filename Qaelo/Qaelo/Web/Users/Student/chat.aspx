@@ -58,7 +58,7 @@
                         <ul class="nav navbar-nav">
                              <li ><a href="students-profile.aspx">My Profile</a></li>  			
                             <li><a href="students-freelancers.aspx">FIND A FREELANCER</a></li>
-                            <li><a href="facility.aspx">Find A FACILITY</a></li>
+                            <li><a href="facility.aspx">SEARCH YOUR COMMUNITY</a></li>
                             <li><a href="chat.aspx">Inbox</a></li>
 <%--                            <li><a href="student-accommodation.aspx" >ROOMS</a></li>
                             <li><a href="students-events.aspx">Events & AUditions</a></li>

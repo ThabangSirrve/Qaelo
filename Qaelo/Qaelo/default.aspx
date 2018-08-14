@@ -108,7 +108,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <nav class="link-effect-2" id="link-effect-2">
                         <ul class="nav navbar-nav">
                             <li><a href="Web/Users/Student/students-freelancers.aspx"><span data-hover="FIND A FREELANCER">FIND A FREELANCER</span></a></li>
-                            <li><a href="Web/Users/student/facility.aspx"><span data-hover="Find a facility">SEARCH YOUR COMMUNITY</span></a></li>
+                            <li><a href="Web/Users/student/facility.aspx"><span data-hover="SEARCH YOUR COMMUNITY">SEARCH YOUR COMMUNITY</span></a></li>
 <%--                        <li><a href="Web/Users/Student/student-accommodation.aspx" ><span data-hover="ROOMS">ROOMS</span></a></li>
                             <li><a href="Web/Users/Student/students-events.aspx" ><span data-hover="Events & AUditions">Events & AUditions</span></a></li>
                             <li><a href="Web/Users/Student/students-buy-textbooks.aspx"><span data-hover="BUY BOOKS">BUY BOOKS</span></a></li>

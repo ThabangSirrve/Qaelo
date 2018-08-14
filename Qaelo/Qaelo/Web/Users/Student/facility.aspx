@@ -17,6 +17,8 @@
     max-width: 100%; /* Max Width of the popover (depending on the container!) */
 }
     </style>
+    
+    
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -45,11 +47,16 @@
                                           </div>
           </div>
                          
-       <div class="col-sm-8"> 
-           <asp:TextBox ID="txtText" placeholder="Type Location" runat="server" type="text" class="typeaheadPlaces tt-query form-control" autocomplete="on" spellcheck="false"></asp:TextBox>
-           <asp:Button ID="btnSearch" CssClass="btn btn-default" style="color:sandybrown" runat="server" Text="Find" OnClick="btnSearch_Click"  />
-                         
+       <div class="col-sm-7"> 
+           <%--<asp:TextBox ID="txtText" placeholder="Type Location" runat="server" type="text" class="typeaheadPlaces tt-query form-control" autocomplete="on" spellcheck="false"></asp:TextBox>--%>
+           <input type="text" id="txtPlaces" name="txtPlaces" placeholder="Type Location" class="form-control" />
+    
        </div> 
+
+      <div class="col-sm-1"> 
+           <asp:Button ID="btnSearch" CssClass="btn btn-default" style="color:sandybrown" runat="server" Text="Find" OnClick="btnSearch_Click"  />
+      </div>
+      
        
      </div>
         
@@ -83,5 +90,37 @@
     $('#popover3').popover({ placement: 'bottom', trigger: 'hover', content: image, html: true });
 
 </script>
+
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDhovLlaG3eVxPiJDVmp6CKDUHXgk2PxS4&libraries=places"></script>
+
+   <script type="text/javascript">
+       var facilityAddress = "";
+
+       google.maps.event.addDomListener(window, 'load', function () {
+           var places = new google.maps.places.Autocomplete(document.getElementById('txtPlaces'));
+           google.maps.event.addListener(places, 'place_changed', function () {
+               var place = places.getPlace();
+               var address = place.formatted_address;
+               var latitude = place.geometry.location.A;
+               var longitude = place.geometry.location.F;
+               var mesg = "Address: " + address;
+               mesg += "\nLatitude: " + latitude;
+               mesg += "\nLongitude: " + longitude;
+           });
+       });
+
+
+
+<%--       (function ($) {
+           //var success = $('#<%=lblSearchValue.ClientID%>').text();
+           if (facilityAddress.length) {
+               alert(success);
+           }
+           else {
+               alert("There's nothing");
+           }
+       })(jQuery);--%>
+
+    </script>
 
 </asp:Content>

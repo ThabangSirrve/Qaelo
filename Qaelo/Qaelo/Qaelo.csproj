@@ -251,6 +251,7 @@
     <Content Include="Content\CustomCss\notify\.gitignore" />
     <Content Include="Content\CustomCss\notify\LICENSE" />
     <Content Include="Content\CustomCss\notify\README.md" />
+    <Content Include="testGoogleAPI.aspx" />
     <Content Include="Web\Users\Student\test.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -457,6 +458,13 @@
     <Compile Include="Security\CryptoService.cs" />
     <Compile Include="Security\ICryptoService.cs" />
     <Compile Include="Security\Secrecy.cs" />
+    <Compile Include="testGoogleAPI.aspx.cs">
+      <DependentUpon>testGoogleAPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="testGoogleAPI.aspx.designer.cs">
+      <DependentUpon>testGoogleAPI.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Web\Account\Account.Master.cs">
       <DependentUpon>Account.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

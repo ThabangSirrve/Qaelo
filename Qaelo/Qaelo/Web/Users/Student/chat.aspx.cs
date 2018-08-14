@@ -127,7 +127,7 @@ namespace Qaelo.Web.Users.Student
                     else
                     {
                         //Chat conversations
-                        lblConversation.Text = "<img class='center' style='width:50%;height:50%' src='../../../Images/Inbox/defualt%20image.png'/>";
+                        lblConversation.Text = "<img class='center' style='width:50%;height:50%;' src='../../../Images/Inbox/defualt%20image.png'/>";
                     }
 
                     lblChatList.Text = chatList;
