@@ -30,12 +30,12 @@ namespace Qaelo.Web.Users.Student
                 txtEmail.Text = student.Email;
                 txtName.Text = student.FirstName;
                 txtLastName.Text = student.LastName;
-                txtNumber.Text = student.Number;
-                txtQualification.Text = student.QualificationEnrolled;
-                if (student.YearOfStudy != string.Empty)
-                    ddlYear.SelectedIndex = ddlYear.Items.IndexOf(ddlYear.Items.FindByValue(student.YearOfStudy));
+                //txtNumber.Text = student.Number;
+                //txtQualification.Text = student.QualificationEnrolled;
+                //if (student.YearOfStudy != string.Empty)
+                //    ddlYear.SelectedIndex = ddlYear.Items.IndexOf(ddlYear.Items.FindByValue(student.YearOfStudy));
 
-                txtText.Text = student.Institution;
+                //txtText.Text = student.Institution;
 
                 string proficePic = "~/Images/Users/Students/" + student.ProfileImage;
 
@@ -112,8 +112,9 @@ namespace Qaelo.Web.Users.Student
         protected void btnFinish_Click(object sender, EventArgs e)
         {
             Qaelo.Models.StudentModel.Student student = (Qaelo.Models.StudentModel.Student)Session["STUDENT"];
+            string txtSearch = String.Format("{0}", Request.Form["txtPlaces"]);
 
-            if (txtText.Text == "")
+            if (txtSearch == "")
             {
                 lblErrorMessage.Text = "Please select a valid tertiary institutiom";
                 return;
@@ -174,30 +175,30 @@ namespace Qaelo.Web.Users.Student
                 lblErrorMessage.Text = "Please provide provide your Name";
                 return;
             }
-            else if (txtNumber.Text == "")
-            {
-                lblErrorMessage.Text = "Please provide provide your Phone number";
-                return;
-            }
+            //else if (txtNumber.Text == "")
+            //{
+            //    lblErrorMessage.Text = "Please provide provide your Phone number";
+            //    return;
+            //}
             else if (txtPrice.Text == "" && ddlPriceTerms.SelectedItem.Value != "Negotiable")
             {
                 lblErrorMessage.Text = "Please provide price for your freelancing services";
                 return;
             }
-            else if (txtQualification.Text == "")
-            {
-                lblErrorMessage.Text = "Please provide provide qualification enrolled";
-                return;
-            }
-            else if (ddlYear.SelectedItem.Value == "NONE")
-            {
-                lblErrorMessage.Text = "Please select year of study";
-                return;
-            }
+            //else if (txtQualification.Text == "")
+            //{
+            //    lblErrorMessage.Text = "Please provide provide qualification enrolled";
+            //    return;
+            //}
+            //else if (ddlYear.SelectedItem.Value == "NONE")
+            //{
+            //    lblErrorMessage.Text = "Please select year of study";
+            //    return;
+            //}
 
                 string images = filename1;
                 //Upload 
-                if (new StudentConnection().updateStudent(new Qaelo.Models.StudentModel.Student(student.Id, "", "", student.Email, txtName.Text, txtText.Text, txtLastName.Text, txtNumber.Text, "", filename1, txtQualification.Text, DateTime.Now, "", ddlYear.SelectedItem.Value)))
+                if (new StudentConnection().updateStudent(new Qaelo.Models.StudentModel.Student(student.Id, "", "", student.Email, txtName.Text, txtSearch, txtLastName.Text, "", "", filename1, "", DateTime.Now, "", "")))
                 {
                     //Save freelancing 
                     new StudentConnection().updateFreelancer(new Models.StudentModel.Freelancer(student.Id, txtDescription.Text, "", price, work));

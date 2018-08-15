@@ -123,10 +123,11 @@
                                  Please fill all the fields below.
                               </p>
                                     <div class="col-md-12 text-center">
-                                       <div class="form-group">
+
+                                       <div class="form-group col-md-8 col-md-offset-2">
                                           <label>Location:</label>
                                            <br /> 
-                                         <asp:TextBox ID="txtText" placeholder="Type Tertiary Institution" runat="server" type="text" class="typeaheadPlaces tt-query form-control" autocomplete="on" spellcheck="false"></asp:TextBox>
+                                         <asp:TextBox ID="txtText" placeholder="Type Location" disabled="true" runat="server" type="text" class="form-control" autocomplete="on" spellcheck="false"></asp:TextBox>
                                   
                                              </div>
                                         </div>                          

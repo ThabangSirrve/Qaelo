@@ -252,6 +252,8 @@
     <Content Include="Content\CustomCss\notify\LICENSE" />
     <Content Include="Content\CustomCss\notify\README.md" />
     <Content Include="testGoogleAPI.aspx" />
+    <Content Include="Web\Users\Facility\inbox.aspx" />
+    <Content Include="Web\Users\Student\inbox.aspx" />
     <Content Include="Web\Users\Student\test.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -312,7 +314,6 @@
     <Content Include="Web\Users\EventPoster\ManageEvents.aspx" />
     <Content Include="Web\Users\EventPoster\PostEvent.aspx" />
     <Content Include="Web\Users\EventPoster\Sellticket.aspx" />
-    <Content Include="Web\Users\Facility\chat.aspx" />
     <Content Include="Web\Users\Facility\discount.aspx" />
     <Content Include="Web\Users\Facility\edit-discount.aspx" />
     <Content Include="Web\Users\Facility\edit-facility.aspx" />
@@ -329,7 +330,6 @@
     <Content Include="Web\Users\Society\EditProfile.aspx" />
     <Content Include="Web\Users\Society\ListEvent.aspx" />
     <Content Include="Web\Users\Student\change-password.aspx" />
-    <Content Include="Web\Users\Student\chat.aspx" />
     <Content Include="Web\Users\Student\facility.aspx" />
     <Content Include="Web\Users\Student\student-accommodation.aspx" />
     <Content Include="Web\Users\Student\student-edit-profile.aspx" />
@@ -703,13 +703,6 @@
     <Compile Include="Web\Users\EventPoster\Sellticket.aspx.designer.cs">
       <DependentUpon>Sellticket.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Web\Users\Facility\chat.aspx.cs">
-      <DependentUpon>chat.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Web\Users\Facility\chat.aspx.designer.cs">
-      <DependentUpon>chat.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Web\Users\Facility\discount.aspx.cs">
       <DependentUpon>discount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -744,6 +737,13 @@
     </Compile>
     <Compile Include="Web\Users\Facility\home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Facility\inbox.aspx.cs">
+      <DependentUpon>inbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Facility\inbox.aspx.designer.cs">
+      <DependentUpon>inbox.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web\Users\Facility\list-facility.aspx.cs">
       <DependentUpon>list-facility.aspx</DependentUpon>
@@ -878,19 +878,19 @@
     <Compile Include="Web\Users\Student\change-password.aspx.designer.cs">
       <DependentUpon>change-password.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Web\Users\Student\chat.aspx.cs">
-      <DependentUpon>chat.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Web\Users\Student\chat.aspx.designer.cs">
-      <DependentUpon>chat.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Web\Users\Student\facility.aspx.cs">
       <DependentUpon>facility.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Web\Users\Student\facility.aspx.designer.cs">
       <DependentUpon>facility.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Users\Student\inbox.aspx.cs">
+      <DependentUpon>inbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Users\Student\inbox.aspx.designer.cs">
+      <DependentUpon>inbox.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web\Users\Student\student-accommodation.aspx.cs">
       <DependentUpon>student-accommodation.aspx</DependentUpon>

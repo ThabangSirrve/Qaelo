@@ -262,7 +262,9 @@ namespace Qaelo.Web.Users.Student
         {
             //Get all students from selected varsity 
             StudentConnection connection = new StudentConnection();
-            string query = " Institution = " + "'" + txtText.Text + "'";
+            string txtSearch = String.Format("{0}", Request.Form["txtPlaces"]);
+
+            string query = " Institution = " + "'" + txtSearch + "'";
             List<Qaelo.Models.StudentModel.Student> students = connection.getAllStudents(query);
 
             List<Qaelo.Models.StudentModel.Freelancer> freelancers = new List<Models.StudentModel.Freelancer>();
@@ -272,7 +274,7 @@ namespace Qaelo.Web.Users.Student
             {
                 //add student as freelance 
                 if(connection.getStudent(freelancer.StudentId) != null)
-                    if (connection.getStudent(freelancer.StudentId).Institution.Equals(txtText.Text))
+                    if (connection.getStudent(freelancer.StudentId).Institution.Equals(txtSearch))
                         if(freelancer.Work.Contains(txtFreelancers.Text))
                             freelancers.Add(freelancer);
             }

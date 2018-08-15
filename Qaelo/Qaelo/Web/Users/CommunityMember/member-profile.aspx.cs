@@ -268,7 +268,7 @@ namespace Qaelo.Web.Users.CommunityMember
                             <h6><b>{2} - <small>{3}</small></b></h6>
                             <strong>Shop No:<small>{4}</small></strong><br />
                            <strong> Open: <small>{5}</small></strong><br />
-                            <strong>Call:<small>{6}</small>
+                            <strong><small>{6}</small>
                                 <a href='#shopSpecial{7}' data-toggle='modal' class='btn btn-default pull-right'>View Special</a>
                             </strong><br />
                         </div><br />

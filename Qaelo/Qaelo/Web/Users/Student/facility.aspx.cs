@@ -55,9 +55,9 @@ namespace Qaelo.Web.Users.Student
                 string chatLink = "";
 
                 if (Session["STUDENT"] == null)
-                    chatLink = "<a class='btn btn-success' href='../../Account/tempLogin.aspx'> Let's Chat</a>";
+                    chatLink = string.Format("<a class='btn btn-success' href='../../Account/tempLogin.aspx?page=Users/Student/inbox.aspx?chatTo={0}'> Let's Chat</a>", shop.ShopOwnerId + "F");
                 else
-                    chatLink = string.Format("<a class='btn btn-success' href='chat.aspx?chatTo={0}'> Let's Chat</a> ", shop.ShopOwnerId + "F");
+                    chatLink = string.Format("<a class='btn btn-success' href='inbox.aspx?chatTo={0}'> Let's Chat</a> ", shop.ShopOwnerId + "F");
 
                     lblSingleFacility.Text += string.Format(@"<div class='modal fade' id='shop{0}' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
                         <div class='modal-dialog modal-lg'>

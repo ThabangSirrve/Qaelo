@@ -16,6 +16,14 @@
         .popover3{
     max-width: 100%; /* Max Width of the popover (depending on the container!) */
 }
+        .btnFind {
+            color: sandybrown;
+        }
+        .btnFind:hover { 
+            background-color: #fac08e !important; 
+            color: white;
+        }
+
     </style>
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaYiQPQ1vAMeFLPA4ilHRPfcFG6zfE7uY&libraries=places"></script>
@@ -35,14 +43,16 @@
           <div class="col-sm-4">
               <div class="form-group">
                   <asp:TextBox ID="txtFreelancers"  placeholder="What freelancer are you looking for?" runat="server" type="text" class="typeaheadFreelancers tt-query freelanceClass form-control " autocomplete="on" spellcheck="false"></asp:TextBox>                              
-                                                   </div>
+              </div>
           </div>
                          
-       <div class="col-sm-8"> 
-
-                         <asp:TextBox ID="txtText" placeholder="Type Location" runat="server" type="text" class="typeaheadPlaces tt-query form-control" autocomplete="on" spellcheck="false"></asp:TextBox>
-                        <asp:Button ID="btnSearch" CssClass="btn btn-default" style="color:sandybrown" runat="server" Text="Find" OnClick="btnSearch_Click" />
-                    </div> 
+       <div class="col-sm-7"> 
+           <input type="text" id="txtPlaces" name="txtPlaces" placeholder="Type Location" class="form-control" />
+                         <%--<asp:TextBox ID="txtText" placeholder="Type Location" runat="server" type="text" class="typeaheadPlaces tt-query form-control" autocomplete="on" spellcheck="false"></asp:TextBox>--%>
+       </div>
+      <div class="col-sm-1"> 
+          <asp:Button ID="btnSearch" CssClass="btn btn-default btnFind" runat="server" Text="Find" OnClick="btnSearch_Click" />
+      </div>
        
      </div>
         
@@ -117,5 +127,27 @@
     $('#popover3').popover({ placement: 'bottom', trigger: 'hover', content: image, html: true });
 
 </script>
+
+
+        <!-- Maps -->
+   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDhovLlaG3eVxPiJDVmp6CKDUHXgk2PxS4&libraries=places"></script>
+   <script type="text/javascript">
+       var facilityAddress = "";
+
+       google.maps.event.addDomListener(window, 'load', function () {
+           var places = new google.maps.places.Autocomplete(document.getElementById('txtPlaces'));
+           google.maps.event.addListener(places, 'place_changed', function () {
+               var place = places.getPlace();
+               var address = place.formatted_address;
+               var latitude = place.geometry.location.A;
+               var longitude = place.geometry.location.F;
+               var mesg = "Address: " + address;
+               mesg += "\nLatitude: " + latitude;
+               mesg += "\nLongitude: " + longitude;
+           });
+       });
+
+    </script>
+
 
 </asp:Content>

@@ -23,7 +23,9 @@ namespace Qaelo.Web.Users.Facility
         protected void btnfinish_Click(object sender, EventArgs e)
         {
             /*Start by Adding special to the database ***/
-            if (txtDescription.Text.Equals("") || txtOpenHours.Equals("") || txtShoNo.Equals("") || txtShopName.Equals("") || txtText.Equals(""))
+            string txtSearch = String.Format("{0}", Request.Form["txtPlaces"]);
+
+            if (txtDescription.Text.Equals("") || txtOpenHours.Equals("") || txtShoNo.Equals("") || txtShopName.Equals("") || txtSearch.Equals(""))
             {
                 lblErrorMessage.Text = "All fields are required";
                 return;
@@ -53,7 +55,7 @@ namespace Qaelo.Web.Users.Facility
                 string images = filename1;
 
                 //Upload shop
-                if (new ShopConnection().postShop(new Models.ShopOwnerModel.Shop(owner.Id, ddlFacility.SelectedItem.Text, txtDescription.Text, images, txtShopName.Text, txtOpenHours.Text, txtShoNo.Text, txtText.Text)))
+                if (new ShopConnection().postShop(new Models.ShopOwnerModel.Shop(owner.Id, ddlFacility.SelectedItem.Text, txtDescription.Text, images, txtShopName.Text, txtOpenHours.Text, txtShoNo.Text, txtSearch)))
                 {
                     lblSuccess.Text = "You have successfully added a Special";
                     Response.Redirect("manage-facilities.aspx");

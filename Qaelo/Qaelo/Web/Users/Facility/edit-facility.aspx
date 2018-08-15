@@ -153,7 +153,7 @@
                                                  
                                        <div class="col-sm-7  col-sm-offset-1">
                                            <div class="form-group">
-                                                <asp:TextBox ID="txtText" placeholder="Type Location" runat="server" type="text" class="typeaheadPlaces tt-query form-control" autocomplete="on" spellcheck="false"></asp:TextBox>
+                                                <asp:TextBox ID="txtText" disabled="true" placeholder="Type Location" runat="server" type="text" class="form-control" autocomplete="on" spellcheck="false"></asp:TextBox>
                                            </div>
 
                                        </div>

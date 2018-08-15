@@ -110,15 +110,14 @@
                                   </div>
                                   <div class="col-sm-12">
                                       <div class="col-sm-5">
-                                          <div class="form-group">
-                                              <label>Email <small></small></label>
-                                              <asp:TextBox ID="txtEmail" disabled="" name="email" type="email" class="form-control" placeholder="me@gmail.com" runat="server"></asp:TextBox>
-                                          </div>
+
                                       </div>
                                       <div class="col-sm-6">
                                       <div class="form-group">
-                                        <label>Contact number <small>(required)</small></label>
-                                          <asp:TextBox ID="txtNumber" name="number" type="number" class="form-control" placeholder="072.." runat="server"></asp:TextBox>
+                                          <div class="form-group">
+                                              <label>Email <small></small></label>
+                                              <asp:TextBox ID="txtEmail" disabled="" name="email" type="email" class="form-control" placeholder="me@gmail.com" runat="server"></asp:TextBox>
+                                          </div>  
                                       </div>
                                           
                                       </div>
@@ -132,12 +131,12 @@
                       </div>
 
                       <div class="tab-pane fade" id="profile">
-                          <h3 class="head text-center">Tertiary information</h3>
+                          <h3 class="head text-center">Location information</h3>
                           <p class="narrow text-center">
-                             Please tell us more about you tertiary education.
+                             Please tell us where you are located.
                           </p>
                         <!-- Content here-->
-                                                            <div class="col-sm-12">
+<%--                                                            <div class="col-sm-12">
                                       <div class="col-sm-5">
                                           <div class="form-group">
                                               <label>Qaulification <small>(required)</small></label>
@@ -160,14 +159,15 @@
                                                                   </asp:DropDownList>
                                           </div>
                                       </div>
-                                  </div>
+                                  </div>--%>
 
                                   <div class="col-sm-12">
                                                                             
-                                      <div class="col-sm-5">
+                                      <div class="col-sm-8 col-sm-offset-2">
                                           <div class="form-group">
-                                              <label>University <small>(required)</small></label>
-                                               <asp:TextBox ID="txtText" placeholder="Type Tertiary Institution" runat="server" type="text" class="typeaheadPlaces tt-query form-control" autocomplete="on" spellcheck="false"></asp:TextBox>
+                                              <label>Location <small>(required)</small></label>
+                                               <%--<asp:TextBox ID="txtText" placeholder="Type Tertiary Institution" runat="server" type="text" class="typeaheadPlaces tt-query form-control" autocomplete="on" spellcheck="false"></asp:TextBox>--%>
+                                                <input type="text" id="txtPlaces" name="txtPlaces" placeholder="Type Location" class="form-control" />
 
                                           </div>
                                       </div>
@@ -251,4 +251,24 @@
             </div>
             </div>
             </section>
+
+        <!-- Maps -->
+   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDhovLlaG3eVxPiJDVmp6CKDUHXgk2PxS4&libraries=places"></script>
+   <script type="text/javascript">
+            var facilityAddress = "";
+
+            google.maps.event.addDomListener(window, 'load', function () {
+                var places = new google.maps.places.Autocomplete(document.getElementById('txtPlaces'));
+                google.maps.event.addListener(places, 'place_changed', function () {
+                    var place = places.getPlace();
+                    var address = place.formatted_address;
+                    var latitude = place.geometry.location.A;
+                    var longitude = place.geometry.location.F;
+                    var mesg = "Address: " + address;
+                    mesg += "\nLatitude: " + latitude;
+                    mesg += "\nLongitude: " + longitude;
+                });
+            });
+
+    </script>
 </asp:Content>

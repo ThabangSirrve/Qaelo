@@ -26,10 +26,11 @@ namespace Qaelo.Web.Users.Facility
         protected void btnFinish_Click(object sender, EventArgs e)
         {
             ShopOwner owner = (ShopOwner)Session["SHOPOWNER"];
+            string txtSearch = String.Format("{0}", Request.Form["txtPlaces"]);
 
             if (txtDescription.Text == string.Empty || txtName.Text == string.Empty || txtOpenHours.Text == string.Empty
                 || txtPrice.Text == string.Empty || txtShoNo.Text == string.Empty || txtShopName.Text == string.Empty
-                || txtText.Text == string.Empty)
+                || txtSearch == string.Empty)
             {
                 divError.Visible = true;
                 return;
@@ -57,7 +58,7 @@ namespace Qaelo.Web.Users.Facility
 
             //Special is no refer to as Discount 
             Qaelo.Models.ShopOwnerModel.Shop special = new Qaelo.Models.ShopOwnerModel.Shop(owner.Id, txtPrice.Text, txtDescription.Text, filename1, txtName.Text, txtOpenHours.Text, txtShoNo.Text
-                , txtText.Text);
+                , txtSearch);
 
             if (new ShopConnection().postSpecial(special))
             {

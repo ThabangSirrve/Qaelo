@@ -211,3 +211,11 @@ img {
     height: 516px;
     overflow-y: auto;
 }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 150px;
+}

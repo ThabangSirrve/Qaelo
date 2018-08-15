@@ -16,6 +16,13 @@
         .popover3{
     max-width: 100%; /* Max Width of the popover (depending on the container!) */
 }
+        .btnFind {
+            color: sandybrown;
+        }
+        .btnFind:hover { 
+            background-color: #fac08e !important; 
+            color: white;
+        }
     </style>
     
     
@@ -54,13 +61,13 @@
        </div> 
 
       <div class="col-sm-1"> 
-           <asp:Button ID="btnSearch" CssClass="btn btn-default" style="color:sandybrown" runat="server" Text="Find" OnClick="btnSearch_Click"  />
+           <asp:Button ID="btnSearch" CssClass="btn btn-default btnFind" runat="server" Text="Find" OnClick="btnSearch_Click"  />
       </div>
       
        
      </div>
         
-                 <div class="row"> 
+        <div class="row"> 
              <div class="col-md-12">
              <hr/>
              </div>
@@ -108,18 +115,6 @@
                mesg += "\nLongitude: " + longitude;
            });
        });
-
-
-
-<%--       (function ($) {
-           //var success = $('#<%=lblSearchValue.ClientID%>').text();
-           if (facilityAddress.length) {
-               alert(success);
-           }
-           else {
-               alert("There's nothing");
-           }
-       })(jQuery);--%>
 
     </script>
 

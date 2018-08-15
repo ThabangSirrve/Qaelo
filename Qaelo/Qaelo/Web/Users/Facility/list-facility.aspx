@@ -61,6 +61,8 @@
 .tt-suggestion p {
 	margin: 0;
 }
+
+
 </style>
     <!--/Search -->
     <title>New Facility</title>
@@ -152,7 +154,8 @@
                                 <div class="row">
                                        <div class="col-sm-7  col-sm-offset-1">
                                            <div class="form-group">
-                                                <asp:TextBox ID="txtText" placeholder="Type Tertiary Location" runat="server" type="text" class="typeaheadPlaces tt-query form-control" autocomplete="on" spellcheck="false"></asp:TextBox>
+                                                <%--<asp:TextBox ID="txtText" placeholder="Type Tertiary Location" runat="server" type="text" class="typeaheadPlaces tt-query form-control" autocomplete="on" spellcheck="false"></asp:TextBox>--%>
+                                                <input type="text" id="txtPlaces" name="txtPlaces" placeholder="Type Location" class="form-control" />
                                            </div>
 
                                        </div>
@@ -278,7 +281,27 @@
             </div>
             </section>
                             
-    
+
+    <!-- Maps -->
+   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDhovLlaG3eVxPiJDVmp6CKDUHXgk2PxS4&libraries=places"></script>
+   <script type="text/javascript">
+            var facilityAddress = "";
+
+            google.maps.event.addDomListener(window, 'load', function () {
+                var places = new google.maps.places.Autocomplete(document.getElementById('txtPlaces'));
+                google.maps.event.addListener(places, 'place_changed', function () {
+                    var place = places.getPlace();
+                    var address = place.formatted_address;
+                    var latitude = place.geometry.location.A;
+                    var longitude = place.geometry.location.F;
+                    var mesg = "Address: " + address;
+                    mesg += "\nLatitude: " + latitude;
+                    mesg += "\nLongitude: " + longitude;
+                });
+            });
+
+    </script>
+
     <!-- file upload -->
     <script src="../../../Scripts/imageUpload.js"></script>
 </asp:Content>

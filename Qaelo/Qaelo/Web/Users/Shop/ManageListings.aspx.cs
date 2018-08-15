@@ -56,14 +56,14 @@ namespace Qaelo.Web.Users.Shop
                         <h6><b>{2} - <small>{3}</small></b></h6>
                         <strong>Shop No:<small>{4}</small></strong><br />
                        <strong> Open: <small>{5}</small></strong><br />
-                        <strong>Call:<small>{6}</small>
+                        <strong><small>{6}</small>
                         </strong><br /><br />
                             <a href='ManageListings.aspx?delId={7}' class='btn btn-danger pull-lef'>Delete</a>
                             <a href='EditShop.aspx?editId={7}' class='btn btn-info pull-right'>Edit</a>
                     </div>
                   </div>
                 </div>
-            </div>", shop.Image,shop.Description,shop.Name,shop.University,shop.Address,shop.TradingHours,owner.Number,shop.Id);
+            </div>", shop.Image,shop.Description,shop.Name,shop.University,shop.Address,shop.TradingHours,"",shop.Id);
             }
 
             lblShops.Text = html;
@@ -86,14 +86,14 @@ namespace Qaelo.Web.Users.Shop
                         <h6><b>{2} - <small>{3}</small></b></h6>
                         <strong>Shop No:<small>{4}</small></strong><br />
                        <strong> Open: <small>{5}</small></strong><br />
-                        <strong>Call:<small>{6}</small>
+                        <strong><small>{6}</small>
                         </strong><br /><br />
                             <a href='ManageListings.aspx?delSpecialId={7}' class='btn btn-danger pull-lef'>Delete</a>
                             <a href='EditSpecial.aspx?editId={7}' class='btn btn-info pull-right'>Edit now</a>
                     </div>
                   </div>
                 </div>
-            </div>", shop.Image, shop.Description, shop.Name, shop.University, shop.ShopNo, shop.TradingHours, owner.Number, shop.Id);
+            </div>", shop.Image, shop.Description, shop.Name, shop.University, shop.ShopNo, shop.TradingHours, "", shop.Id);
             }
             
             lblSpecials.Text = htmlSpecials;
